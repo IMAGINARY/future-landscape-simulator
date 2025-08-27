@@ -1,0 +1,56 @@
+tileTypes:
+  0:
+    type: empty
+    name: Empty
+    color: '#4a4a4a'
+    editorIcon: 'static/fa/times-solid.svg'
+  10:
+    type: crops
+    name: Crops
+    color: '#945f4b'
+    editorIcon: 'static/fa/carrot-solid-full.svg'
+  11:
+    type: forest
+    name: Forest
+    color: '#51d03c'
+    editorIcon: 'static/fa/tree-solid.svg'
+  12:
+    type: wetlands
+    name: Wetlands
+    color: '#a45ae9'
+    editorIcon: 'static/fa/crow-solid-full.svg'
+  13:
+    type: livestock
+    name: Livestock
+    color: '#eadaaa'
+    editorIcon: 'static/fa/cow-solid-full.svg'
+  14:
+    type: urban-low
+    name: Urban (Low)
+    color: '#f5857d'
+    editorIcon: 'static/fa/home-solid.svg'
+  15:
+    type: urban-mid
+    name: Urban (Mid)
+    color: '#db0d00'
+    editorIcon: 'static/fa/home-solid.svg'
+  16:
+    type: urban-high
+    name: Urban (High)
+    color: '#9b1b13'
+    editorIcon: 'static/fa/home-solid.svg'
+  19:
+    type: industrial
+    name: Industrial
+    color: '#ffeb53'
+    editorIcon: 'static/fa/industry-solid.svg'
+  17:
+    type: solar-farm
+    name: Solar Farm
+    color: '#ffeb53'
+    editorIcon: 'static/fa/solar-panel-solid-full.svg'
+  18:
+    type: water
+    name: Water
+    color: '#19fff7'
+    editorIcon: 'static/fa/water-solid.svg'
