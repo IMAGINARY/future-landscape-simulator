@@ -1,0 +1,24 @@
+{
+  "name": "future-landscape-simulator",
+  "version": "0.0.1",
+  "description": "",
+  "main": "future-mobility/dist/index.html",
+  "dependencies": {
+    "cpx": "^1.5.0",
+    "degit": "^2.8.4"
+  },
+  "engines": {
+    "node": ">=24.4.1"
+  },
+  "scripts": {
+    "watch:copy": "cpx './extras/**' './future-mobility/' -vw",
+    "watch:compile": "cd ./future-mobility && npm run watch",
+    "build": "rm -rf ./future-mobility && degit github:IMAGINARY/future-mobility#v1.0.0-dev.4 --force future-mobility && cp -R ./extras/. ./future-mobility/. && cd ./future-mobility && npm install && npm run build && cd ./server && npm install && cd .. && cd ..",
+    "server": "cd ./future-mobility/server && npm run start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IMAGINARY/future-mobility-simulator.git"
+  },
+  "private": false
+}

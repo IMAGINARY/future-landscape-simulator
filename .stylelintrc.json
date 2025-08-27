@@ -1,0 +1,3 @@
+{
+  "extends": "./future-mobility/.stylelintrc.json"
+}
