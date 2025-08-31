@@ -9,7 +9,7 @@ function injectTileRenderers(config, mapView) {
   const livestockTileId = getTileTypeId(config, 'livestock');
   const solarFarmTileId = getTileTypeId(config, 'solar-farm');
   const waterTileId = getTileTypeId(config, 'water');
- 
+
   mapView.addTileTypeRenderer(cropsTileId, new OrientedTextureTileRenderer(mapView, 'landscape', 'crops'));
   mapView.addTileTypeRenderer(forestTileId, new RandomTextureTileRenderer(mapView, 'landscape', 'forest', 4));
   mapView.addTileTypeRenderer(wetlandsTileId, new RandomTextureTileRenderer(mapView, 'landscape', 'wetlands', 4));
