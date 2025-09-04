@@ -29,16 +29,19 @@ tileTypes:
     name: Urban (Low)
     color: '#f5857d'
     editorIcon: 'static/fa/home-solid.svg'
+    population: 1
   15:
     type: urban-mid
     name: Urban (Mid)
     color: '#db0d00'
     editorIcon: 'static/fa/home-solid.svg'
+    population: 2
   16:
     type: urban-high
     name: Urban (High)
     color: '#9b1b13'
     editorIcon: 'static/fa/home-solid.svg'
+    population: 3
   19:
     type: industrial
     name: Industrial
