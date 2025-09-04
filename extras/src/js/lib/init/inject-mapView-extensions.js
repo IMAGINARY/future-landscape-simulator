@@ -1,8 +1,8 @@
 /* globals PIXI */
-const DraftingOverlay = require('../drafting-overlay');
-const MapTextOverlay = require('../map-text-overlay');
-const Array2D = require('../lib/array-2d');
-const createDensityMap = require('../lib/create-density-map');
+const DraftingOverlay = require('../view-pixi/drafting-overlay');
+const MapTextOverlay = require('../view-pixi/map-text-overlay');
+const Array2D = require('../data/array-2d');
+const createDensityMap = require('../model/create-density-map');
 
 const qs = new URLSearchParams(window.location.search);
 

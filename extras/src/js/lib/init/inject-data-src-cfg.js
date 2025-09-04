@@ -4,8 +4,6 @@ const dataSrcCfg = {
   dataSources: [
     ZoningData,
   ],
-  mainVariables: {
-  },
 };
 
 module.exports = dataSrcCfg;

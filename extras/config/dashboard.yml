@@ -1,0 +1,51 @@
+dashboard:
+  # The ordered list of languages that will be displayed on the dashboard
+  languages:
+    - de
+    - en
+  theme: default
+  goals:
+    title:
+      de: "Ziele"
+      en: "Goals"
+  status:
+    title:
+      de: "Status"
+      en: "Status"
+    indexes: {}
+  powerUps:
+    title:
+      de: "Power-Ups"
+      en: "Power-Ups"
+    button:
+      text:
+        de: "<span class='large'>Power-Ups aktivieren</span>"
+        en: "Activate Power-Ups"
+    cancelButton:
+      text:
+        de: "Abbrechen"
+        en: "Cancel"
+    selector:
+      # Number of seconds after which the Power-up selector times out
+      timeout: 30
+      # If true, the Power-up selector's randomizer will not consider the Power-ups that were used
+      # last, unless there are no other Power-ups available.
+      hideLastActive: true
+    noneActive:
+      text:
+        de: 'Keine Power-Ups aktiv'
+        en: 'No Power-Ups active'
+    disableButton:
+      text:
+        de: 'Deaktivieren'
+        en: 'Disable'
+  actions:
+    buttons:
+      - id: show-pollution
+        text:
+          de: "<span class='large'>Luftverschmutzung</span><br>anzeigen"
+          en: "Show pollution"
+      - id: show-noise
+        text:
+          de: "<span class='large'>Lärmbelastung</span><br>anzeigen"
+          en: "Show noise"

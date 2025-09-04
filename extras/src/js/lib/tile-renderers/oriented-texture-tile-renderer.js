@@ -1,5 +1,5 @@
-const Array2D = require('../lib/array-2d');
-const { Orientation } = require('../city');
+const Array2D = require('../data/array-2d');
+const { Orientation } = require('../model/city');
 
 const OrientationToName = {
   [Orientation.NORTH]: 'north',

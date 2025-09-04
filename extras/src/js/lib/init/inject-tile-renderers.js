@@ -1,4 +1,4 @@
-const { getTileTypeId } = require('../lib/config-helpers');
+const { getTileTypeId } = require('../data/config-helpers');
 const RandomTextureTileRenderer = require('../tile-renderers/random-texture-tile-renderer');
 const OrientedTextureTileRenderer = require('../tile-renderers/oriented-texture-tile-renderer');
 

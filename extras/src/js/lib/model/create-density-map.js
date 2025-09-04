@@ -1,4 +1,4 @@
-const Array2D = require('../lib/array-2d');
+const Array2D = require('../data/array-2d');
 
 /**
  * Creates a density map from the given cells.
