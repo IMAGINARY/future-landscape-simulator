@@ -1,9 +1,6 @@
 mapEditor:
   palette:
-    toolButtons:
-      - id: measureDistance
-        title: Measure distance
-        icon: 'static/fa/ruler-horizontal-solid.svg'
+    toolButtons: []
     actionButtons:
       - id: load
         title: Load Map
