@@ -18,7 +18,7 @@
 },
 "crops-south":
 {
-	"frame": {"x":75,"y":1,"w":72,"h":72},
+	"frame": {"x":1,"y":149,"w":72,"h":72},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":72},
@@ -26,7 +26,7 @@
 },
 "crops-west":
 {
-	"frame": {"x":1,"y":149,"w":72,"h":72},
+	"frame": {"x":75,"y":1,"w":72,"h":72},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":72},
@@ -42,7 +42,7 @@
 },
 "forest-02":
 {
-	"frame": {"x":149,"y":1,"w":72,"h":72},
+	"frame": {"x":75,"y":149,"w":72,"h":72},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":72},
@@ -50,7 +50,7 @@
 },
 "forest-03":
 {
-	"frame": {"x":75,"y":149,"w":72,"h":72},
+	"frame": {"x":149,"y":1,"w":72,"h":72},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":72},
@@ -59,6 +59,14 @@
 "forest-04":
 {
 	"frame": {"x":149,"y":75,"w":72,"h":72},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":72},
+	"sourceSize": {"w":72,"h":72}
+},
+"industrial-01":
+{
+	"frame": {"x":149,"y":149,"w":72,"h":72},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":72},
@@ -74,29 +82,13 @@
 },
 "solar-farm-01":
 {
-	"frame": {"x":149,"y":149,"w":72,"h":72},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":72},
-	"sourceSize": {"w":72,"h":72}
-},
-"wetlands-01":
-{
 	"frame": {"x":223,"y":75,"w":72,"h":72},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":72},
 	"sourceSize": {"w":72,"h":72}
 },
-"wetlands-02":
-{
-	"frame": {"x":297,"y":1,"w":72,"h":72},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":72},
-	"sourceSize": {"w":72,"h":72}
-},
-"wetlands-03":
+"urban-high-01":
 {
 	"frame": {"x":223,"y":149,"w":72,"h":72},
 	"rotated": false,
@@ -104,9 +96,49 @@
 	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":72},
 	"sourceSize": {"w":72,"h":72}
 },
-"wetlands-04":
+"urban-low-01":
+{
+	"frame": {"x":297,"y":1,"w":72,"h":72},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":72},
+	"sourceSize": {"w":72,"h":72}
+},
+"urban-mid-01":
+{
+	"frame": {"x":371,"y":1,"w":72,"h":72},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":72},
+	"sourceSize": {"w":72,"h":72}
+},
+"wetlands-01":
 {
 	"frame": {"x":297,"y":75,"w":72,"h":72},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":72},
+	"sourceSize": {"w":72,"h":72}
+},
+"wetlands-02":
+{
+	"frame": {"x":297,"y":149,"w":72,"h":72},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":72},
+	"sourceSize": {"w":72,"h":72}
+},
+"wetlands-03":
+{
+	"frame": {"x":371,"y":75,"w":72,"h":72},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":72},
+	"sourceSize": {"w":72,"h":72}
+},
+"wetlands-04":
+{
+	"frame": {"x":371,"y":149,"w":72,"h":72},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":72},
@@ -121,8 +153,8 @@
 	"version": "1.1",
 	"image": "landscape.png",
 	"format": "RGBA8888",
-	"size": {"w":370,"h":222},
+	"size": {"w":444,"h":222},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:d198664e562395b2767f57bcf03b0d63:91d6710bd00ab7c096a3ac153b445b6c:e08cfcfc2519119c193ce8104f3350f4$"
+	"smartupdate": "$TexturePacker:SmartUpdate:7221d4609a2d0115203ef503636845c6:5d899508d27da0d73be738b490c176d8:e08cfcfc2519119c193ce8104f3350f4$"
 }
 }
