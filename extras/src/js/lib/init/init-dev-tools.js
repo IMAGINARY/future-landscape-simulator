@@ -7,7 +7,7 @@ const CitizenRequestView = require('../dashboard/citizen-request-view');
 const CitizenRequestViewMgr = require('../dashboard/citizen-request-view-mgr');
 const GoalDebugView = require('../dev-tools/goal-debug-view');
 const mapObject = require('../data/map-object');
-const { populationCounter } = require('../dev-tools/fls-tile-counters');
+const { populationCounter, averageCarbonCounter } = require('../dev-tools/fls-tile-counters');
 
 function initDevTools(config, mapView, mapEditorController, stats, powerUpMgr) {
   const devTools = new DevToolsComponent();
@@ -59,7 +59,8 @@ function initDevTools(config, mapView, mapEditorController, stats, powerUpMgr) {
   //
   devTools.addSection('counters', 'Counters');
   const counterView = new TileCounterView(config, [
-    populationCounter
+    populationCounter,
+    averageCarbonCounter,
   ]);
   devTools.addToSection('counters', counterView.$element);
   stats.events.on('update', () => {

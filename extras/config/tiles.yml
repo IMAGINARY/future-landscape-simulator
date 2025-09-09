@@ -9,51 +9,61 @@ tileTypes:
     name: Crops
     color: '#945f4b'
     editorIcon: 'static/fa/carrot-solid-full.svg'
+    carbon: 1
   11:
     type: forest
     name: Forest
     color: '#51d03c'
     editorIcon: 'static/fa/tree-solid.svg'
+    carbon: -1
   12:
     type: wetlands
     name: Wetlands
     color: '#a45ae9'
     editorIcon: 'static/fa/crow-solid-full.svg'
+    carbon: -1
   13:
     type: livestock
     name: Livestock
     color: '#eadaaa'
     editorIcon: 'static/fa/cow-solid-full.svg'
+    carbon: 5
   14:
     type: urban-low
     name: Urban (Low)
     color: '#f5857d'
     editorIcon: 'static/fa/home-solid.svg'
     population: 1
+    carbon: 2
   15:
     type: urban-mid
     name: Urban (Mid)
     color: '#db0d00'
     editorIcon: 'static/fa/home-solid.svg'
     population: 2
+    carbon: 3
   16:
     type: urban-high
     name: Urban (High)
     color: '#9b1b13'
     editorIcon: 'static/fa/home-solid.svg'
     population: 3
+    carbon: 4
   19:
     type: industrial
     name: Industrial
     color: '#ffeb53'
     editorIcon: 'static/fa/industry-solid.svg'
+    carbon: 5
   17:
     type: solar-farm
     name: Solar Farm
     color: '#ffeb53'
     editorIcon: 'static/fa/solar-panel-solid-full.svg'
+    carbon: -5
   18:
     type: water
     name: Water
     color: '#19fff7'
     editorIcon: 'static/fa/water-solid.svg'
+    carbon: 0

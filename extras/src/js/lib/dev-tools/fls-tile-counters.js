@@ -6,4 +6,12 @@ const populationCounter = {
   },
 };
 
-module.exports = { populationCounter };
+const averageCarbonCounter = {
+  id: 'carbon-avg',
+  label: 'Avg. Carbon',
+  calculate: (stats) => {
+    return (stats.get('carbon-avg')).toFixed(2);
+  },
+}
+
+module.exports = { populationCounter, averageCarbonCounter };

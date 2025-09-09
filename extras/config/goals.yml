@@ -1,0 +1,16 @@
+goals:
+  carbon:
+    index-thresholds:
+      # Threshold values (average carbon < threshold) for each index level
+      5: 0.2
+      4: 0.5
+      3: 1
+      2: 2
+      # 1 is the default
+    # Suggested percentage of tiles that should be solar farms
+    enough-solar-farms-percentage: 4
+    # Suggested percentage of tiles that should be forests
+    enough-forests-percentage: 25
+
+
+

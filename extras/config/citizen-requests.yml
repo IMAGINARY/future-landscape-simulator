@@ -1,0 +1,36 @@
+citizenRequests:
+  enough-solar-farms-percentage:
+    en: "enough-solar-farms-percentage"
+    de: "enough-solar-farms-percentage"
+    group: carbon
+    urgent: false
+  enough-forests-percentage:
+    en: "enough-forests-percentage"
+    de: "enough-forests-percentage"
+    group: carbon
+    urgent: false
+  reduce-emissions:
+    en: "reduce-emissions"
+    de: "reduce-emissions"
+    group: carbon
+    urgent: false
+citizenIcons:
+  regular:
+    - static/openmoji/bw/man-beard.svg
+    - static/openmoji/bw/man-older.svg
+    - static/openmoji/bw/man-raising-hand.svg
+    - static/openmoji/bw/man.svg
+    - static/openmoji/bw/person-bald.svg
+    - static/openmoji/bw/person.svg
+    - static/openmoji/bw/person-raising-hand.svg
+    - static/openmoji/bw/person-older.svg
+    - static/openmoji/bw/person-curly.svg
+    - static/openmoji/bw/woman-older.svg
+    - static/openmoji/bw/woman-raising-hand.svg
+    - static/openmoji/bw/woman.svg
+    - static/openmoji/bw/woman-curly.svg
+    - static/openmoji/bw/woman-headscarf.svg
+  urgent:
+    - static/openmoji/bw/person-frowning.svg
+    - static/openmoji/bw/woman-frowning.svg
+    - static/openmoji/bw/man-frowning.svg

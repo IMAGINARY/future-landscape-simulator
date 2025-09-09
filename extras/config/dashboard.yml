@@ -12,7 +12,12 @@ dashboard:
     title:
       de: "Status"
       en: "Status"
-    indexes: {}
+    indexes:
+      carbon-index:
+        name:
+          de: CO₂-Bilanz
+          en: CO₂ Balance
+        variable: carbon-index
   powerUps:
     title:
       de: "Power-Ups"
