@@ -13,7 +13,7 @@ class DataOverlayController {
 
   updateMap() {
     if (this.currentVariable) {
-      this.overlay.display(this.stats.get(currentMapVariable));
+      this.overlay.display(this.stats.get(this.currentVariable));
     }
   }
 
