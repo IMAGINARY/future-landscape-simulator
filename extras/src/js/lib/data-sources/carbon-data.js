@@ -32,6 +32,8 @@ class CarbonData extends DataSource {
   }
 
   calculate() {
+    this.solarFarmCount = 0;
+    this.forestCount = 0;
     Array2D.forEach(this.city.map.cells, (v, x, y) => {
       this.carbonMap[y][x] = this.config.tileTypes?.[v]?.carbon || 0;
       if (v === this.solarFarmTileId) {

@@ -14,11 +14,10 @@ const Array2D = require('../data/array-2d');
  * @param {[[Number]]} cells
  * @returns {[[Number]]} density map
  */
-function createDensityMap(cells) {
+function calculateDensityMap(cells, densityMap) {
   const height = cells.length;
   const width = cells[0].length;
   const directDensityMap = Array2D.create(width, height, 1);
-  const densityMap = Array2D.create(width, height, 1);
 
   // First we iterate over the cells to find 2x2 blocks
   for (let y = 0; y < height - 1; y++) {
@@ -88,4 +87,4 @@ function createDensityMap(cells) {
   return densityMap;
 }
 
-module.exports = createDensityMap;
+module.exports = calculateDensityMap;

@@ -2,7 +2,7 @@
 const DraftingOverlay = require('../view-pixi/drafting-overlay');
 const MapTextOverlay = require('../view-pixi/map-text-overlay');
 const Array2D = require('../data/array-2d');
-const createDensityMap = require('../model/create-density-map');
+const calculateDensityMap = require('../model/calculate-density-map');
 
 const qs = new URLSearchParams(window.location.search);
 
@@ -27,7 +27,7 @@ function injectMapViewExtensions(config, textures, mapView, powerUpViewMgr) {
     densityOverlay.display(densities);
     densityOverlay.show();
     mapView.city.events.on('update', () => {
-      densityOverlay.display(createDensityMap(mapView.city.map.cells));
+      densityOverlay.display(calculateDensityMap(mapView.city.map.cells, densities));
     });
   }
 }

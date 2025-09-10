@@ -10,7 +10,14 @@ goals:
     # Suggested percentage of tiles that should be solar farms
     enough-solar-farms-percentage: 4
     # Suggested percentage of tiles that should be forests
-    enough-forests-percentage: 25
+    enough-forests-percentage: 20
+  economic-growth:
+    index-thresholds:
+      # Threshold values (average productivity > threshold) for each index level
+      5: 1.1
+      4: 0.8
+      3: 0.5
+      2: 0.2
 
 
 

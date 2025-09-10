@@ -18,6 +18,11 @@ dashboard:
           de: CO₂-Bilanz
           en: CO₂ Balance
         variable: carbon-index
+      economic-growth:
+        name:
+          de: Wirtschaftswachstum
+          en: Economic Growth
+        variable: economic-growth-index
   powerUps:
     title:
       de: "Power-Ups"

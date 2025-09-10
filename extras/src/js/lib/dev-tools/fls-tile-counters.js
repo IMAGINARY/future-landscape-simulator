@@ -14,4 +14,15 @@ const averageCarbonCounter = {
   },
 }
 
-module.exports = { populationCounter, averageCarbonCounter };
+const productivityCounter = {
+  id: 'productivity-index',
+  label: 'Productivity (Potential / Capacity)',
+  calculate: (stats) => {
+    const potential = stats.get('productivity-total');
+    const capacity = stats.get('productive-capacity-total');
+    const averageActualProductivity = stats.get('productivity-actual-avg').toFixed(2);
+    return `${averageActualProductivity} (${potential} / ${capacity})`;
+  }
+};
+
+module.exports = { populationCounter, averageCarbonCounter, productivityCounter };

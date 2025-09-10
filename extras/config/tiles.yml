@@ -1,3 +1,14 @@
+# Tile properties:
+# - type: internal tile type identifier
+# - name: display name
+# - color: hex color code for the tile (for the editor, or if the tile has no texture)
+# - editorIcon: icon to be used in the editor (path relative to the static/ folder)
+# - population: integer, the number of citizens living on this tile
+# - carbon: integer, the carbon impact of the tile (negative values reduce carbon footprint)
+# - productivity: integer, the productivity of a tile, or a map of integers indexed by the tile's density
+# - productiveCapacity: integer, the amount of productivity that this tile enables in the map
+# - biodiversity: integer, the biodiversity of a tile, or a map of integers indexed by the tile's density
+#
 tileTypes:
   0:
     type: empty
@@ -10,24 +21,50 @@ tileTypes:
     color: '#945f4b'
     editorIcon: 'static/fa/carrot-solid-full.svg'
     carbon: 1
+    productivity:
+      urban: 0
+      density-1: 0
+      density-2: 1
+      density-3: 2
+    biodiversity:
+      urban: 1
+      density-1: 2
+      density-2: 1
+      density-3: 0
   11:
     type: forest
     name: Forest
     color: '#51d03c'
     editorIcon: 'static/fa/tree-solid.svg'
     carbon: -1
+    productivity:
+      urban: 0
+      density-1: 0
+      density-2: 1
+      density-3: 2
+    biodiversity:
+      urban: 1
+      density-1: 2
+      density-2: 3
+      density-3: 3
   12:
     type: wetlands
     name: Wetlands
     color: '#a45ae9'
     editorIcon: 'static/fa/crow-solid-full.svg'
     carbon: -1
+    biodiversity:
+      urban: 1
+      density-1: 2
+      density-2: 3
+      density-3: 5
   13:
     type: livestock
     name: Livestock
     color: '#eadaaa'
     editorIcon: 'static/fa/cow-solid-full.svg'
     carbon: 5
+    productivity: 3
   14:
     type: urban-low
     name: Urban (Low)
@@ -35,6 +72,8 @@ tileTypes:
     editorIcon: 'static/fa/home-solid.svg'
     population: 1
     carbon: 2
+    productiveCapacity: 4
+    biodiversity: 1
   15:
     type: urban-mid
     name: Urban (Mid)
@@ -42,6 +81,7 @@ tileTypes:
     editorIcon: 'static/fa/home-solid.svg'
     population: 2
     carbon: 3
+    productiveCapacity: 8
   16:
     type: urban-high
     name: Urban (High)
@@ -49,12 +89,14 @@ tileTypes:
     editorIcon: 'static/fa/home-solid.svg'
     population: 3
     carbon: 4
+    productiveCapacity: 10
   19:
     type: industrial
     name: Industrial
     color: '#ffeb53'
     editorIcon: 'static/fa/industry-solid.svg'
     carbon: 5
+    productivity: 5
   17:
     type: solar-farm
     name: Solar Farm
