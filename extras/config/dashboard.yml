@@ -23,6 +23,11 @@ dashboard:
           de: Wirtschaftswachstum
           en: Economic Growth
         variable: economic-growth-index
+      biodiversity:
+        name:
+          de: Biodiversität
+          en: Biodiversity
+        variable: biodiversity-index
   powerUps:
     title:
       de: "Power-Ups"

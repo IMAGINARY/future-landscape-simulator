@@ -46,8 +46,6 @@ class CarbonData extends DataSource {
     this.carbon = Array2D.flatten(this.carbonMap);
     this.avgCarbon = this.carbon.reduce((a, b) => a + b, 0) / this.carbon.length;
     this.carbonIndex = this.calculateCarbonIndex();
-    // Goal-related calculations
-
   }
 
   calculateCarbonIndex() {

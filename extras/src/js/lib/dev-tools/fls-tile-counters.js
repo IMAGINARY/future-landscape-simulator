@@ -25,4 +25,12 @@ const productivityCounter = {
   }
 };
 
-module.exports = { populationCounter, averageCarbonCounter, productivityCounter };
+const biodiversityCounter = {
+  id: 'high-biodiversity',
+  label: 'High Biodiversity Tiles',
+  calculate: (stats) => {
+    return `${stats.get('biodiversity-high-count')} (${stats.get('biodiversity-high-percent').toFixed(2)}%)`;
+  }
+}
+
+module.exports = { populationCounter, averageCarbonCounter, productivityCounter, biodiversityCounter };

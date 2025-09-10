@@ -18,6 +18,19 @@ goals:
       4: 0.8
       3: 0.5
       2: 0.2
-
-
+  biodiversity:
+    # Minimum biodiversity value for a tile to be considered "high biodiversity"
+    high-biodiversity-threshold: 4
+    # Minium acceptable biodiversity value
+    min-acceptable-biodiversity: 2
+    # Percentage of tiles that should have high biodiversity to raise the index by
+    # n points
+    index-high-biodiversity-percentage:
+      2: 5
+      1: 2
+    # Percentage of regions (4x4 tile blocks) that should have acceptable biodiversity to raise the
+    # index by n points
+    index-region-biodiversity-percentage:
+      2: 80
+      1: 50
 

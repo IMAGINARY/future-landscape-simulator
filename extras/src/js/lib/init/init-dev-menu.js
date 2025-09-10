@@ -13,6 +13,8 @@ function initDevMenu(config, mapView, mapEditorController, stats, powerUpMgr) {
     'Productivity': () => { dataOverlayController.display('productivity-map'); },
     'Productive Capacity': () => { dataOverlayController.display('productive-capacity-map'); },
     'Carbon': () => { dataOverlayController.display('carbon-map'); },
+    'Biodiversity': () => { dataOverlayController.display('biodiversity-map'); },
+    'Biodiversity (regions)': () => { dataOverlayController.display('biodiversity-region-map'); },
   });
 
   return devMenu.$element;
