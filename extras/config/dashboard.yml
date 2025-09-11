@@ -16,7 +16,7 @@ dashboard:
       carbon-index:
         name:
           de: CO₂-Bilanz
-          en: CO₂ Balance
+          en: Carbon Balance
         variable: carbon-index
       economic-growth:
         name:
@@ -28,6 +28,11 @@ dashboard:
           de: Biodiversität
           en: Biodiversity
         variable: biodiversity-index
+      food-production:
+        name:
+          de: Lebensmittelproduktion
+          en: Food Production
+        variable: food-production-index
   powerUps:
     title:
       de: "Power-Ups"

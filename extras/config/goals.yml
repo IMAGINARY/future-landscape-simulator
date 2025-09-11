@@ -33,4 +33,23 @@ goals:
     index-region-biodiversity-percentage:
       2: 80
       1: 50
+  food-production:
+    # Amount of plant-based food required for livestock feed per livestock tile
+    feed-per-livestock-tile: 6
+    # Maximum percentage of plant-based food grown that might be used for feed
+    max-feed-percentage: 50
+    index-thresholds:
+      5:
+        min-food-per-capita: 1
+        min-animal-food-per-capita: 0.3
+        min-feed-percent: 100
+      4:
+        min-food-per-capita: 0.8
+        min-animal-food-per-capita: 0.2
+        min-feed-percent: 60
+      3:
+        min-food-per-capita: 0.6
+        min-animal-food-per-capita: 0.1
+      2:
+        min-food-per-capita: 0.4
 

@@ -31,6 +31,12 @@ tileTypes:
       density-1: 2
       density-2: 1
       density-3: 0
+    food:
+      urban: 1
+      density-1: 2
+      density-2: 3
+      density-3: 4
+    food-type: plant
   11:
     type: forest
     name: Forest
@@ -65,6 +71,8 @@ tileTypes:
     editorIcon: 'static/fa/cow-solid-full.svg'
     carbon: 5
     productivity: 3
+    food: 6
+    food-type: animal
   14:
     type: urban-low
     name: Urban (Low)
