@@ -31,7 +31,7 @@ goals:
     # Percentage of regions (4x4 tile blocks) that should have acceptable biodiversity to raise the
     # index by n points
     index-region-biodiversity-percentage:
-      2: 80
+      2: 75
       1: 50
   food-production:
     # Amount of plant-based food required for livestock feed per livestock tile

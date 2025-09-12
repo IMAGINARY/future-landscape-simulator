@@ -91,7 +91,7 @@ class EconomicGrowthData extends DataSource {
         categoory: 'economic-growth',
         priority: 1,
         condition: this.productiveCapacityTotal >= this.productivityTotal,
-        progress: this.goalProgress(this.productiveCapacityTotal / this.productivityTotal, 1)
+        progress: this.goalProgress(this.productiveCapacityTotal, this.productivityTotal)
       },
       {
         id: 'high-productivity',

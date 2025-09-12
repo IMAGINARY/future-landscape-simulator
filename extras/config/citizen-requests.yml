@@ -9,12 +9,12 @@ citizenRequests:
     de: "Manche Gegenden haben eine geringe Biodiversität. Es fehlen Naturflächen wie Feuchtgebiete oder Wälder."
     group: biodiversity
     urgent: false
-  enough-solar-farms-percentage:
+  enough-solar-farms:
     en: "Solar Farms can provide renewable energy and improve our carbon balance."
     de: "Solarparks können erneuerbare Energie liefern und unsere CO₂-Bilanz verbessern."
     group: carbon
     urgent: false
-  enough-forests-percentage:
+  enough-forests:
     en: "Forests can improve our carbon balance, because trees capture CO₂ from the air."
     de: "Wälder können unsere CO₂-Bilanz verbessern, weil Bäume CO₂ aus der Luft speichern."
     group: carbon
