@@ -53,6 +53,7 @@ tileTypes:
       density-1: 2
       density-2: 3
       density-3: 3
+    natureXp: 1
   12:
     type: wetlands
     name: Wetlands
@@ -64,6 +65,7 @@ tileTypes:
       density-1: 2
       density-2: 3
       density-3: 5
+    natureXp: 1
   13:
     type: livestock
     name: Livestock
@@ -73,6 +75,7 @@ tileTypes:
     productivity: 3
     food: 6
     food-type: animal
+    pollution: 1
   14:
     type: urban-low
     name: Urban (Low)
@@ -105,15 +108,18 @@ tileTypes:
     editorIcon: 'static/fa/industry-solid.svg'
     carbon: 5
     productivity: 5
+    pollution: 2
   17:
     type: solar-farm
     name: Solar Farm
     color: '#ffeb53'
     editorIcon: 'static/fa/solar-panel-solid-full.svg'
     carbon: -5
+    pollution: 1
   18:
     type: water
     name: Water
     color: '#19fff7'
     editorIcon: 'static/fa/water-solid.svg'
     carbon: 0
+    natureXp: 1

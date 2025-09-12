@@ -49,4 +49,36 @@ const foodProductionCounter = {
   }
 }
 
-module.exports = { populationCounter, averageCarbonCounter, productivityCounter, biodiversityCounter, foodPerCapitaCounter, foodProductionCounter };
+const averageUrbanPollutionCounter = {
+  id: 'urban-pollution-avg',
+  label: 'Avg. Urban Pollution',
+  calculate: (stats) => {
+    return (stats.get('pollution-urban-avg')).toFixed(2);
+  }
+}
+
+const natureUrbanXpCounter = {
+  id: 'nature-xp-urban-percent',
+  label: 'Urban access to Nature %',
+  calculate: (stats) => {
+    return (stats.get('nature-xp-urban-percent')).toFixed(2);
+  }
+}
+
+const parkCounter = {
+  id: 'parks-percent',
+  label: 'Parks %',
+  calculate: (stats) => {
+    return (stats.get('parks-percent')).toFixed(2);
+  }
+}
+
+const urbanDensityCounter = {
+  id: 'urban-density-avg',
+  label: 'Avg. Urban Density',
+  calculate: (stats) => {
+    return (stats.get('urban-density-avg')).toFixed(2);
+  }
+}
+
+module.exports = { populationCounter, averageCarbonCounter, productivityCounter, biodiversityCounter, foodPerCapitaCounter, foodProductionCounter, averageUrbanPollutionCounter, natureUrbanXpCounter, parkCounter, urbanDensityCounter };

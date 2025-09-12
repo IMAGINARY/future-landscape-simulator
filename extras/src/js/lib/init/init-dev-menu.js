@@ -15,6 +15,7 @@ function initDevMenu(config, mapView, mapEditorController, stats, powerUpMgr) {
     'Carbon': () => { dataOverlayController.display('carbon-map'); },
     'Biodiversity': () => { dataOverlayController.display('biodiversity-map'); },
     'Biodiversity (regions)': () => { dataOverlayController.display('biodiversity-region-map'); },
+    'Pollution': () => { dataOverlayController.display('pollution-map'); },
   });
 
   return devMenu.$element;

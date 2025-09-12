@@ -52,4 +52,23 @@ goals:
         min-animal-food-per-capita: 0.1
       2:
         min-food-per-capita: 0.4
-
+  quality-of-life:
+    index-thresholds:
+      5:
+        max-urban-pollution-average: 0.2
+        min-urban-nature-proximity-percent: 50
+        min-urban-parks-percent: 3
+        min-urban-high-percent: 20
+        min-urban-density-average: 2
+      4:
+        max-urban-pollution-average: 0.4
+        min-urban-nature-proximity-percent: 30
+        min-urban-parks-percent: 2
+        min-urban-high-percent: 10
+        min-urban-density-average: 1.6
+      3:
+        max-urban-pollution-average: 0.6
+        min-urban-nature-proximity-percent: 15
+        min-urban-parks-percent: 1
+      2:
+        max-urban-pollution-average: 0.8

@@ -14,6 +14,10 @@ const {
   biodiversityCounter,
   foodPerCapitaCounter,
   foodProductionCounter,
+  averageUrbanPollutionCounter,
+  natureUrbanXpCounter,
+  parkCounter,
+  urbanDensityCounter
 } = require('../dev-tools/fls-tile-counters');
 
 function initDevTools(config, mapView, mapEditorController, stats, powerUpMgr) {
@@ -72,6 +76,10 @@ function initDevTools(config, mapView, mapEditorController, stats, powerUpMgr) {
     biodiversityCounter,
     foodPerCapitaCounter,
     foodProductionCounter,
+    averageUrbanPollutionCounter,
+    natureUrbanXpCounter,
+    parkCounter,
+    urbanDensityCounter
   ]);
   devTools.addToSection('counters', counterView.$element);
   stats.events.on('update', () => {

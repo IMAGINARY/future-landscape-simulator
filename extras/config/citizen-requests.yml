@@ -49,6 +49,31 @@ citizenRequests:
     de: "Wir produzieren zu wenig Futter für die Viehhaltung. Wir brauchen mehr Nutzpflanzen."
     group: food-production
     urgent: false
+  urban-pollution:
+    en: "Quality of life is affected by smells, pollution, and ugly sights. We should distance urban and industrial areas."
+    de: "Gestank, dreckige Luft und häßliche Aussicht senken die Lebensqualität. Industrie raus aus der Stadt!"
+    group: quality-of-life
+    urgent: false
+  urban-nature-proximity:
+    en: "The quality of life in cities increases when there are forests and bodies of water nearby."
+    de: "Wälder und Gewässer in Stadtnähe steigern die Lebensqualität."
+    group: quality-of-life
+    urgent: false
+  urban-parks:
+    en: "Having access to nature inside the city increases quality of life."
+    de: "Zugang zu Natur im Stadtgebiet erhöht die Lebensqualität."
+    group: quality-of-life
+    urgent: false
+  enough-urban-high-density:
+    en: "A denser city, with taller buildings, reduces the distances people need to travel, and increases quality of life."
+    de: "Eine dichtere Stadt mit höheren Gebäuden verkürzt die Wege für die Menschen und erhöht die Lebensqualität."
+    group: quality-of-life
+    urgent: false
+  reduce-urban-sprawl:
+    en: "A more concentrated urban area reduces the need for cars, increasing quality of life."
+    de: "Ein kompakteres Stadtgebiet verringert den Bedarf an Autos und erhöht die Lebensqualität."
+    group: quality-of-life
+    urgent: false
 citizenIcons:
   regular:
     - static/openmoji/bw/man-beard.svg
