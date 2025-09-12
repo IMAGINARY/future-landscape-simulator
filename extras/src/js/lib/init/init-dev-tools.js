@@ -41,14 +41,14 @@ function initDevTools(config, mapView, mapEditorController, stats, powerUpMgr) {
   //
   // Goals section
   //
-  // devTools.addSection('goals', 'Goals');
-  // const citizenRequestView = new CitizenRequestView(config);
-  // devTools.addToSection('goals', citizenRequestView.$element);
-  // const citizenRequestViewMgr = new CitizenRequestViewMgr(citizenRequestView);
-  // citizenRequestViewMgr.handleUpdate(stats.getGoals());
-  // stats.events.on('update', () => {
-  //   citizenRequestViewMgr.handleUpdate(stats.getGoals());
-  // });
+  devTools.addSection('goals', 'Goals');
+  const citizenRequestView = new CitizenRequestView(config);
+  devTools.addToSection('goals', citizenRequestView.$element);
+  const citizenRequestViewMgr = new CitizenRequestViewMgr(citizenRequestView);
+  citizenRequestViewMgr.handleUpdate(stats.getGoals());
+  stats.events.on('update', () => {
+    citizenRequestViewMgr.handleUpdate(stats.getGoals());
+  });
 
   //
   // Power-ups section
