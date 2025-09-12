@@ -9,12 +9,15 @@
     padding: 3rem 1rem;
     margin: 3em 0.8em;
     width: auto;
+    border-color: fls-colors.$black;
+    background-color: #ffffff6e;
 
     .text {
       font-size: fls-type.$normal-size;
       margin-bottom: 1em;
       color: fls-colors.$white;
       opacity: 0.85;
+      color: fls-colors.$black;
     }
   }
 }

@@ -9,23 +9,23 @@ h2 {
 }
 
 #col-1 {
-  background-color: fls-colors.$green;
+  background-color: fls-colors.$fls-green;
 }
 
 #col-2 {
-  background-color: fls-colors.$turquoise;
+  background-color: fls-colors.$fls-turquoise;
 }
 
 #col-3,
 #col-actions-powerup {
-  background-color: fls-colors.$orange;
+  background-color: fls-colors.$fls-blue;
 }
 
 #col-actions {
   background-color: fls-colors.$blue;
 }
 
-$ballon-bg-color: fls-colors.$green-1;
+$ballon-bg-color: fls-colors.$fls-green-light;
 
 .citizen-requests {
   .request-balloon {

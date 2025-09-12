@@ -1,36 +1,33 @@
 @use 'fls-colors';
 
-$orange-yellow-blend: #ff8f00; // Yellow over orange w/ soft-light blend mode
-$yellow-green-blend: #afd109; // Green over yellow w/ soft-light blend mode
-
 .index-list {
   .index.value-1 {
     .value::before {
-      background-color: fls-colors.$orange;
+      background-color: fls-colors.$fls-index-1;
     }
   }
 
   .index.value-2 {
     .value::before {
-      background-color: $orange-yellow-blend;
+      background-color: fls-colors.$fls-index-2;
     }
   }
 
   .index.value-3 {
     .value::before {
-      background-color: fls-colors.$yellow;
+      background-color: fls-colors.$fls-index-3;
     }
   }
 
   .index.value-4 {
     .value::before {
-      background-color: $yellow-green-blend;
+      background-color: fls-colors.$fls-index-4;
     }
   }
 
   .index.value-5 {
     .value::before {
-      background-color: fls-colors.$green;
+      background-color: fls-colors.$fls-index-5;
     }
   }
 }

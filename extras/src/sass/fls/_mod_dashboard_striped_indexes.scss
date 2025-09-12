@@ -1,6 +1,6 @@
 @use 'fls-colors';
 
-@mixin dashboard-index-striped($color-odd: fls-colors.$turquoise-9, $color-even: fls-colors.$turquoise-7) {
+@mixin dashboard-index-striped($color-odd: fls-colors.$fls-turquoise-light, $color-even: fls-colors.$fls-turquoise) {
   #col-2 {
     padding: 0;
   }
