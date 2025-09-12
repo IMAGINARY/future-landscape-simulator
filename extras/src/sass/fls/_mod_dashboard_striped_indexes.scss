@@ -1,0 +1,30 @@
+@use 'fls-colors';
+
+@mixin dashboard-index-striped($color-odd: fls-colors.$turquoise-9, $color-even: fls-colors.$turquoise-7) {
+  #col-2 {
+    padding: 0;
+  }
+
+  .index-list {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+
+    .variables {
+      background-color: transparent;
+
+      .index {
+        margin: 0;
+        padding: 1rem 1rem 0.25rem 1rem;
+      }
+
+      .index:nth-child(even) {
+        background-color: $color-even;
+      }
+
+      .index:nth-child(odd) {
+        background-color: $color-odd;
+      }
+    }
+  }
+}

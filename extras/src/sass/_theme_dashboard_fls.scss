@@ -1,0 +1,13 @@
+// fls Dashboard Theme by Eric Londaits for Imaginary gGmbH
+@use 'sass:meta';
+
+.dashboard-app.theme-fls {
+  @include meta.load-css('fls/mod_dashboard_reset');
+  @include meta.load-css('fls/mod_dashboard_layout');
+  @include meta.load-css('fls/mod_dashboard_striped_indexes');
+  @include meta.load-css('fls/mod_dashboard_type');
+  @include meta.load-css('fls/mod_dashboard_buttons');
+  @include meta.load-css('fls/mod_dashboard_smileys');
+  @include meta.load-css('fls/mod_dashboard_powerup_selector');
+  @include meta.load-css('fls/mod_dashboard_animation');
+}

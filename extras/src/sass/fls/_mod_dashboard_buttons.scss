@@ -1,0 +1,123 @@
+@use 'buttons';
+@use 'fls-colors';
+@use 'fls-type';
+
+button {
+  @include buttons.button-variant(fls-colors.$dark-blue, fls-colors.$turquoise-1, fls-colors.$turquoise-1);
+
+  font-size: fls-type.$small-size !important;
+  border-radius: 5rem;
+  height: 8rem;
+  min-height: auto;
+  padding: 0;
+
+  .text {
+    display: block;
+    font-size: fls-type.$small-size !important;
+    line-height: 1.1;
+    text-transform: uppercase;
+    margin-bottom: 0.6rem;
+
+    .large {
+      display: inline-block;
+      font-size: fls-type.$small-size !important;
+    }
+  }
+
+  .text-main {
+    margin-bottom: 0.1em;
+  }
+
+  &.disabled,
+  &[disabled] {
+    opacity: 0.8;
+
+    .text {
+      color: fls-colors.$dark-blue;
+      opacity: 0.45;
+    }
+
+    &::before,
+    &::after {
+      opacity: 0.45;
+    }
+  }
+}
+
+button.btn-dashboard-action {
+  position: relative;
+  margin: 1.1em 0;
+  text-align: left;
+  padding-left: 8rem !important;
+
+  &::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    left: 1rem;
+    top: 0.9rem;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    background-color: fls-colors.$turquoise-4;
+  }
+
+  &::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    left: 1rem;
+    top: 0.9rem;
+    width: 6rem;
+    height: 6rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+  }
+}
+
+button.btn-show-pollution {
+  &::before {
+    background-color: fls-colors.$orange;
+  }
+
+  &::after {
+    background-image: url('../../static/fls-ui-icons/fls-inspect.svg');
+    background-size: 67%;
+  }
+}
+
+button.btn-show-noise {
+  &::before {
+    background-color: fls-colors.$turquoise;
+  }
+
+  &::after {
+    background-image: url('../../static/fls-ui-icons/fls-inspect.svg');
+    background-size: 67%;
+  }
+}
+
+button.btn-power-ups-activate {
+  height: 8rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+
+  &::after {
+    background-image: url('../../static/fls-ui-icons/fls-add.svg');
+    background-size: 50%;
+  }
+}
+
+.powerup .btn-power-ups-disable {
+  height: 5rem;
+  padding-left: 5rem;
+  padding-right: 3rem;
+}
+
+button.btn-cancel {
+  &::after {
+    background-image: url('../../static/fls-ui-icons/fls-back.svg');
+    background-size: 50%;
+  }
+}

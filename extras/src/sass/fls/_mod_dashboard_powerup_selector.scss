@@ -1,0 +1,113 @@
+@use 'buttons';
+@use 'fls-type';
+@use 'fls-colors';
+
+.power-up-status {
+  .no-selection {
+    border: 8px dashed fls-colors.$white;
+    border-radius: 2rem;
+    padding: 3rem 1rem;
+    margin: 3em 0.8em;
+    width: auto;
+
+    .text {
+      font-size: fls-type.$normal-size;
+      margin-bottom: 1em;
+      color: fls-colors.$white;
+      opacity: 0.85;
+    }
+  }
+}
+
+.powerup {
+  background-color: fls-colors.$turquoise;
+  color: fls-colors.$white;
+  border-radius: 3rem;
+  overflow: hidden;
+
+  .title {
+    padding-bottom: 2.25rem;
+    background-color: fls-colors.$yellow;
+    color: fls-colors.$dark-blue;
+
+    .text-main,
+    .text-translation {
+      font-size: fls-type.$normal-size;
+    }
+  }
+
+  .description {
+    padding: 2rem 2.5rem;
+    font-size: fls-type.$small-size;
+  }
+
+  .image {
+    background-size: cover;
+  }
+
+  .btn-power-ups-disable {
+    @include buttons.button-variant(fls-colors.$orange, #ffe591, fls-colors.$orange);
+
+    position: relative;
+    width: auto;
+    border: 0.3rem solid fls-colors.$orange;
+    background-image: none;
+    padding-left: 4.5rem;
+
+    &::before {
+      content: "×"; // cross product x
+      position: absolute;
+      top: -0.9rem;
+      left: 1.1rem;
+      font-size: 4rem;
+      color: fls-colors.$orange;
+    }
+
+    .text {
+      display: inline-block;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.powerups-selector-main {
+  padding: 0 2rem 2rem;
+
+  .powerup-container {
+    padding: 0 1rem;
+  }
+}
+
+.powerups-selector-bottom {
+  padding-right: 2.8rem;
+}
+
+.powerups-selection {
+  padding: 0 1.1rem;
+
+  .powerup {
+    position: relative;
+    background-color: fls-colors.$yellow;
+    color: fls-colors.$dark-blue;
+
+    .title {
+      position: relative;
+      background-color: transparent;
+    }
+
+    &::before {
+      content: " ";
+      display: block;
+      position: absolute;
+      right: 1.5rem;
+      top: 1.4rem;
+      width: 5rem;
+      height: 5rem;
+      background-image: url('../../static/fls-ui-icons/fls-star.svg');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+      opacity: 0.8;
+    }
+  }
+}

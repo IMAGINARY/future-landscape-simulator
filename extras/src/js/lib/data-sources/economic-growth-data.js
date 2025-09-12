@@ -90,14 +90,14 @@ class EconomicGrowthData extends DataSource {
         id: 'enough-workers',
         categoory: 'economic-growth',
         priority: 1,
-        condition: () => this.productiveCapacityTotal < this.productivityTotal,
+        condition: this.productiveCapacityTotal >= this.productivityTotal,
         progress: this.goalProgress(this.productiveCapacityTotal / this.productivityTotal, 1)
       },
       {
         id: 'high-productivity',
         categoory: 'economic-growth',
         priority: 2,
-        condition: () => this.economicGrowthIndex < 5,
+        condition: this.economicGrowthIndex >= 5,
         progress: this.goalProgress(this.economicGrowthIndex, 5)
       }
     ];

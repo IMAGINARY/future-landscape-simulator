@@ -1,0 +1,29 @@
+@use 'fls-colors';
+@use 'mod_dashboard_striped_indexes' as striped;
+
+.citizen-requests {
+  background-color: transparent;
+  padding-right: 1.2em;
+
+  .request-balloon {
+    &::after {
+      left: -1.65rem;
+      top: 3.15rem;
+    }
+  }
+}
+
+.index-list {
+  background-color: transparent;
+  color: fls-colors.$black;
+
+  .index {
+    .description {
+      background-size: 3em 3em;
+      background-position: 0 0;
+      padding-left: 6.8rem;
+    }
+  }
+}
+
+@include striped.dashboard-index-striped(fls-colors.$turquoise-4, fls-colors.$turquoise);

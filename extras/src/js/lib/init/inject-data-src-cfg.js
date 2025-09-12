@@ -6,6 +6,7 @@ const CarbonData = require('../data-sources/carbon-data');
 const EconomicGrowthData = require('../data-sources/economic-growth-data');
 const BiodiversityData = require('../data-sources/biodiversity-data');
 const FoodProductionData = require('../data-sources/food-production-data');
+const QualityOfLifeData = require('../data-sources/quality-of-life-data');
 
 const dataSrcCfg = {
   dataSources: [
@@ -17,6 +18,7 @@ const dataSrcCfg = {
     EconomicGrowthData,
     BiodiversityData,
     FoodProductionData,
+    QualityOfLifeData,
   ],
 };
 

@@ -6,6 +6,7 @@
         <entryData>
           <resourceRoots>
             <path value="file://$PROJECT_DIR$/future-mobility/src" />
+            <path value="file://$PROJECT_DIR$/extras/src/sass" />
           </resourceRoots>
         </entryData>
       </entry>

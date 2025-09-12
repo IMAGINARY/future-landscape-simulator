@@ -73,21 +73,21 @@ class CarbonData extends DataSource {
         id: 'enough-solar-farms',
         category: 'carbon',
         priority: 1,
-        condition: solarFarmPct < solarFarmGoalPct,
+        condition: solarFarmPct >= solarFarmGoalPct,
         progress: this.goalProgress(solarFarmPct, solarFarmGoalPct),
       },
       {
         id: 'enough-forests',
         category: 'carbon',
         priority: 2,
-        condition: forestPct < forestGoalPct,
+        condition: forestPct >= forestGoalPct,
         progress: this.goalProgress(forestPct, forestGoalPct),
       },
       {
         id: 'reduce-emissions',
         category: 'carbon',
         priority: 3,
-        condition: this.carbonIndex < 5,
+        condition: this.carbonIndex >= 5,
         progress: this.goalProgress(this.carbonIndex, 5),
       }
     ]

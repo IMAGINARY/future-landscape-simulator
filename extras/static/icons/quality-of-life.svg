@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40.375 40.375">
+  <g id="b" data-name="line">
+    <polyline points="11.074 25.153 11.074 19.472 8.319 16.515" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.333"/>
+    <line x1="11.372" y1="19.41" x2="12.94" y2="17.597" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.333"/>
+    <path d="M18.893,9.489c0-1.673-1.566-3.033-3.498-3.033-.161.001-.323.013-.483.033-.818-1.746-2.594-2.958-4.66-2.958-2.84,0-5.143,2.288-5.143,5.11,0,.187.011.373.032.558-1.27.455-2.163,1.538-2.163,2.803,0,1.673,1.566,3.033,3.498,3.033.734.007,1.457-.203,2.098-.61.826.746,2.149,1.232,3.644,1.232,2.505,0,4.536-1.358,4.536-3.033,0-.111-.01-.221-.028-.33,1.271-.456,2.167-1.539,2.167-2.805Z" fill="#fff" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.333"/>
+  </g>
+  <g id="c" data-name="line">
+    <rect x="16.875" y="22.956" width="18.144" height="11.665" fill="#fff" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.333"/>
+    <rect x="20.888" y="26.845" width="3.852" height="7.777" fill="#fff" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.333"/>
+    <rect x="28.062" y="26.845" width="4.526" height="3.402" fill="#fff" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.333"/>
+    <polygon points="25.522 14.693 21.408 18.993 21.408 16.174 18.303 16.174 18.303 20.827 16.875 22.47 16.875 22.956 35.018 22.956 35.018 22.47 25.522 14.693" fill="#fff" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.333"/>
+  </g>
+</svg>

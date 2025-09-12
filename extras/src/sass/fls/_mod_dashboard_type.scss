@@ -1,0 +1,65 @@
+@use "fls-colors";
+@use "fls-type";
+
+.dashboard {
+  @include fls-type.body;
+}
+
+.btn-dashboard-action {
+  .text-main {
+    font-size: 1em;
+  }
+
+  .text-translation {
+    font-size: 1em;
+  }
+}
+
+.btn-power-ups-activate{
+  height: calc(100% - 1.65em);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @include fls-type.heading;
+
+  text-transform: uppercase;
+}
+
+.dashboard-title {
+  h2 {
+    font-size: 5rem;
+    margin-bottom: 0.85rem;
+    margin-top: 1.2rem;
+  }
+}
+
+.dashboard-title-translation {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.3em;
+}
+
+.index-list .index .description .name-main {
+  font-size: fls-type.$normal-size;
+}
+
+.citizen-requests {
+  .request-text-main {
+    font-size: fls-type.$small-size;
+    font-weight: bold;
+    margin-bottom: 0.85em;
+
+    .large {
+      font-size: fls-type.$normal-size;
+      font-weight: bold;
+    }
+  }
+
+  .request-text-translation {
+    font-size: fls-type.$small-size;
+
+    .large {
+      font-size: fls-type.$small-size;
+    }
+  }
+}

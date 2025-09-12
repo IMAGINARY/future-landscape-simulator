@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40.375 40.375">
+  <path d="M26.354,19.632c-.702-2.4.022-4.499,1.45-5.142,1.784-.804,4.777.502,4.865,3.701.069,2.5-.818,4.551-2.321,4.991-1.503.44-3.291-1.149-3.994-3.549Z" fill="#fff" stroke="#231f20" stroke-miterlimit="10" stroke-width="1.333"/>
+  <path d="M13.998,21.661c2.075-1.395,7.125-1.317,7.895-.164s-1.038,4.302-3.112,5.696-5.806,5.411-7.206,3.328.348-7.465,2.423-8.86Z" fill="#fff" stroke="#231f20" stroke-miterlimit="10" stroke-width="1.333"/>
+  <path d="M19.446,18.002c2.486-1.672,6.421-1.976,6.749,1.473.182,1.912.517,3.965-1.97,5.637s-3.31-.086-4.629-2.049c-1.32-1.963-2.637-3.389-.15-5.06Z" fill="#fff" stroke="#231f20" stroke-miterlimit="10" stroke-width="1.333"/>
+  <path d="M21.772,28.62s-2.11.547-2.567,1.343-.91,4.76-3.481,5.321" fill="none" stroke="#231f20" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.333"/>
+  <path d="M24.746,28.058s-1.081,3.928-2.405,5.669" fill="none" stroke="#231f20" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.333"/>
+  <path d="M26.994,26.008s1.085,2.706.488,3.501" fill="none" stroke="#231f20" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.333"/>
+  <polyline points="29.989 14.45 32.008 13.283 35.13 12.939" fill="none" stroke="#231f20" stroke-linecap="round" stroke-linejoin="round" stroke-width=".979"/>
+  <ellipse cx="29.701" cy="17.628" rx="1.277" ry="2.179" transform="translate(-4.835 17.212) rotate(-30)" fill="#231f20"/>
+  <line x1="32.378" y1="24.331" x2="31.72" y2="22.28" fill="#fff" stroke="#231f20" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.333"/>
+  <path d="M15.656,8.181c4.51,2.861,7.646,8.079,6.927,9.498s-6.114-1.646-10.624-4.507c-4.51-2.861-3.675-6.54-3.174-7.326s2.361-.526,6.871,2.335Z" fill="#fff" stroke="#231f20" stroke-miterlimit="10" stroke-width="1.333"/>
+  <path d="M14.217,13.179c3.896.927,7.482,3.839,7.371,5.009s-4.674.312-8.57-.614-4.319-3.712-4.186-4.385,1.489-.937,5.385-.01Z" fill="#fff" stroke="#231f20" stroke-miterlimit="10" stroke-width="1.333"/>
+  <line x1="15.164" y1="21.241" x2="19.133" y2="26.663" fill="#fff" stroke="#231f20" stroke-miterlimit="10" stroke-width="1.5"/>
+  <line x1="12.931" y1="22.98" x2="17.118" y2="28.391" fill="#fff" stroke="#231f20" stroke-miterlimit="10" stroke-width="1.5"/>
+  <line x1="11.364" y1="25.617" x2="15.086" y2="29.901" fill="#fff" stroke="#231f20" stroke-miterlimit="10" stroke-width="1.5"/>
+</svg>

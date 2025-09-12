@@ -106,21 +106,21 @@ class FoodProductionData extends DataSource {
         id: 'sufficient-food-production',
         category: 'food-production',
         priority: 1,
-        condition: this.foodProductionPerCapita < level5FoodPerCapita,
+        condition: this.foodProductionPerCapita >= level5FoodPerCapita,
         progress: this.goalProgress(this.foodProductionPerCapita, level5FoodPerCapita),
       },
       {
         id: 'sufficient-animal-food-production',
         category: 'food-production',
         priority: 2,
-        condition: this.foodProductionAnimalPerCapita < level5AnimalFoodPerCapita,
+        condition: this.foodProductionAnimalPerCapita >= level5AnimalFoodPerCapita,
         progress: this.goalProgress(this.foodProductionAnimalPerCapita, level5AnimalFoodPerCapita),
       },
       {
         id: 'sufficient-feed-percentage',
         category: 'food-production',
         priority: 3,
-        condition: this.feedPercentageSatisfied < level5FeedPercent,
+        condition: this.feedPercentageSatisfied >= level5FeedPercent,
         progress: this.goalProgress(this.feedPercentageSatisfied, level5FeedPercent),
       }
     ];

@@ -1,0 +1,8 @@
+@use 'fls-colors';
+@use 'mod_dashboard_striped_indexes' as striped;
+
+.index-list {
+  color: fls-colors.$white;
+}
+
+@include striped.dashboard-index-striped;

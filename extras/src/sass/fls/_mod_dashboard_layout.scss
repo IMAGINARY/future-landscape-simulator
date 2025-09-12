@@ -1,0 +1,56 @@
+@use 'fls-colors';
+
+.dashboard {
+  color: fls-colors.$white;
+}
+
+h2 {
+  color: fls-colors.$white;
+}
+
+#col-1 {
+  background-color: fls-colors.$green;
+}
+
+#col-2 {
+  background-color: fls-colors.$turquoise;
+}
+
+#col-3,
+#col-actions-powerup {
+  background-color: fls-colors.$orange;
+}
+
+#col-actions {
+  background-color: fls-colors.$blue;
+}
+
+$ballon-bg-color: fls-colors.$green-1;
+
+.citizen-requests {
+  .request-balloon {
+    background-color: $ballon-bg-color;
+    color: fls-colors.$black;
+
+    &::after {
+      border-color: transparent $ballon-bg-color transparent transparent;
+    }
+
+    .tileref-stub {
+      outline: 0.125em solid #000;
+    }
+  }
+
+  .request {
+    position: relative;
+  }
+
+  .request-person {
+    transform: scale(1.2) translate(0.35rem, 0.1rem);
+  }
+}
+
+#slide-1,
+#slide-2 {
+  background-color: fls-colors.$blue;
+}

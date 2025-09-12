@@ -121,14 +121,14 @@ class BiodiversityData extends DataSource {
         id: 'high-biodiversity-tiles',
         category: 'biodiversity',
         priority: 1,
-        condition: this.highBiodiversityTilePercent < (this.config.goals?.biodiversity?.['index-high-biodiversity-percentage']?.['2']),
+        condition: this.highBiodiversityTilePercent >= (this.config.goals?.biodiversity?.['index-high-biodiversity-percentage']?.['2']),
         progress: this.goalProgress(this.highBiodiversityTilePercent, this.config.goals?.biodiversity?.['index-high-biodiversity-percentage']?.['2']),
       },
       {
         id: 'enough-acceptable-biodiversity-regions',
         category: 'biodiversity',
         priority: 2,
-        condition: this.biodiversityRegionAcceptablePercent < (this.config.goals?.biodiversity?.['index-region-biodiversity-percentage']?.['2']),
+        condition: this.biodiversityRegionAcceptablePercent >= (this.config.goals?.biodiversity?.['index-region-biodiversity-percentage']?.['2']),
         progress: this.goalProgress(this.biodiversityRegionAcceptablePercent, this.config.goals?.biodiversity?.['index-region-biodiversity-percentage']?.['2']),
       },
     ];

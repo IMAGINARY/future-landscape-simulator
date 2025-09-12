@@ -1,18 +1,53 @@
 citizenRequests:
+  high-biodiversity-tiles:
+    en: "Large wetlands provide homes for wildlife and native plants, and increase biodiversity."
+    de: "Große Feuchtgebiete bieten Tieren und heimischen Pflanzen ein Zuhause und erhöhen die Biodiversität."
+    group: biodiversity
+    urgent: false
+  enough-acceptable-biodiversity-regions:
+    en: "Some zones have low biodiversity. They lack natural areas, like wetlands or forests."
+    de: "Manche Gegenden haben eine geringe Biodiversität. Es fehlen Naturflächen wie Feuchtgebiete oder Wälder."
+    group: biodiversity
+    urgent: false
   enough-solar-farms-percentage:
-    en: "enough-solar-farms-percentage"
-    de: "enough-solar-farms-percentage"
+    en: "Solar Farms can provide renewable energy and improve our carbon balance."
+    de: "Solarparks können erneuerbare Energie liefern und unsere CO₂-Bilanz verbessern."
     group: carbon
     urgent: false
   enough-forests-percentage:
-    en: "enough-forests-percentage"
-    de: "enough-forests-percentage"
+    en: "Forests can improve our carbon balance, because trees capture CO₂ from the air."
+    de: "Wälder können unsere CO₂-Bilanz verbessern, weil Bäume CO₂ aus der Luft speichern."
     group: carbon
     urgent: false
   reduce-emissions:
-    en: "reduce-emissions"
-    de: "reduce-emissions"
+    en: "We need to limit emissions from factories and livestock farms to improve our carbon balance."
+    de: "Wir müssen die Emissionen aus Fabriken und Viehhaltung begrenzen, um unsere CO₂-Bilanz zu verbessern."
     group: carbon
+    urgent: false
+  enough-workers:
+    en: "To grow our economy we need more workers. We should expand urban areas to increase the population."
+    de: "Für unser Wirtschaftswachstum brauchen wir mehr Arbeitskräfte. Mehr Stadtgebiete vergrößern die Bevölkerung."
+    group: economy
+    urgent: false
+  high-productivity:
+    en: "To grow our economy we need more factories, large farms and forests."
+    de: "Für unser Wirtschaftswachstum brauchen wir mehr Fabriken, große Bauernhöfe und Wälder."
+    group: economy
+    urgent: false
+  sufficient-food-production:
+    en: "We don’t produce enough food for our population. We should use more land for farming."
+    de: "Unsere Lebensmittelproduktion reicht für die Bevölkerung nicht aus. Wir sollten mehr Land für Landwirtschaft nutzen."
+    group: food-production
+    urgent: false
+  sufficient-animal-food-production:
+    en: "We are not producing enough meat, dairy and eggs to meet the demand. We need more livestock farms."
+    de: "Wir produzieren nicht genug Fleisch, Eier und Milch. Wir brauchen mehr Viehhaltung."
+    group: food-production
+    urgent: false
+  sufficient-feed-percentage:
+    en: "We are not producing enough food to feed the cattle in our livestock farms. We need more crops."
+    de: "Wir produzieren zu wenig Futter für die Viehhaltung. Wir brauchen mehr Nutzpflanzen."
+    group: food-production
     urgent: false
 citizenIcons:
   regular:
@@ -34,3 +69,4 @@ citizenIcons:
     - static/openmoji/bw/person-frowning.svg
     - static/openmoji/bw/woman-frowning.svg
     - static/openmoji/bw/man-frowning.svg
+tileReferences: {}
