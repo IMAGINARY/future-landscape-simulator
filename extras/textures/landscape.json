@@ -32,7 +32,7 @@
 	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":72},
 	"sourceSize": {"w":72,"h":72}
 },
-"forest-01":
+"forest-d1-01":
 {
 	"frame": {"x":75,"y":75,"w":72,"h":72},
 	"rotated": false,
@@ -40,7 +40,7 @@
 	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":72},
 	"sourceSize": {"w":72,"h":72}
 },
-"forest-02":
+"forest-d1-02":
 {
 	"frame": {"x":75,"y":149,"w":72,"h":72},
 	"rotated": false,
@@ -48,7 +48,7 @@
 	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":72},
 	"sourceSize": {"w":72,"h":72}
 },
-"forest-03":
+"forest-d1-03":
 {
 	"frame": {"x":149,"y":1,"w":72,"h":72},
 	"rotated": false,
@@ -56,7 +56,7 @@
 	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":72},
 	"sourceSize": {"w":72,"h":72}
 },
-"forest-04":
+"forest-d1-04":
 {
 	"frame": {"x":149,"y":75,"w":72,"h":72},
 	"rotated": false,
@@ -64,7 +64,7 @@
 	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":72},
 	"sourceSize": {"w":72,"h":72}
 },
-"industrial-01":
+"forest-d2-01":
 {
 	"frame": {"x":149,"y":149,"w":72,"h":72},
 	"rotated": false,
@@ -72,7 +72,7 @@
 	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":72},
 	"sourceSize": {"w":72,"h":72}
 },
-"livestock-01":
+"forest-d2-02":
 {
 	"frame": {"x":223,"y":1,"w":72,"h":72},
 	"rotated": false,
@@ -80,7 +80,7 @@
 	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":72},
 	"sourceSize": {"w":72,"h":72}
 },
-"solar-farm-01":
+"forest-d2-03":
 {
 	"frame": {"x":223,"y":75,"w":72,"h":72},
 	"rotated": false,
@@ -88,7 +88,7 @@
 	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":72},
 	"sourceSize": {"w":72,"h":72}
 },
-"urban-high-01":
+"forest-d2-04":
 {
 	"frame": {"x":223,"y":149,"w":72,"h":72},
 	"rotated": false,
@@ -96,7 +96,7 @@
 	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":72},
 	"sourceSize": {"w":72,"h":72}
 },
-"urban-low-01":
+"forest-d3-01":
 {
 	"frame": {"x":297,"y":1,"w":72,"h":72},
 	"rotated": false,
@@ -104,15 +104,7 @@
 	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":72},
 	"sourceSize": {"w":72,"h":72}
 },
-"urban-mid-01":
-{
-	"frame": {"x":371,"y":1,"w":72,"h":72},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":72},
-	"sourceSize": {"w":72,"h":72}
-},
-"wetlands-01":
+"forest-d3-02":
 {
 	"frame": {"x":297,"y":75,"w":72,"h":72},
 	"rotated": false,
@@ -120,7 +112,7 @@
 	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":72},
 	"sourceSize": {"w":72,"h":72}
 },
-"wetlands-02":
+"forest-d3-03":
 {
 	"frame": {"x":297,"y":149,"w":72,"h":72},
 	"rotated": false,
@@ -128,7 +120,15 @@
 	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":72},
 	"sourceSize": {"w":72,"h":72}
 },
-"wetlands-03":
+"forest-d3-04":
+{
+	"frame": {"x":371,"y":1,"w":72,"h":72},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":72},
+	"sourceSize": {"w":72,"h":72}
+},
+"forest-urban-01":
 {
 	"frame": {"x":371,"y":75,"w":72,"h":72},
 	"rotated": false,
@@ -136,16 +136,115 @@
 	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":72},
 	"sourceSize": {"w":72,"h":72}
 },
-"wetlands-04":
+"forest-urban-02":
 {
 	"frame": {"x":371,"y":149,"w":72,"h":72},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":72},
 	"sourceSize": {"w":72,"h":72}
+},
+"forest-urban-03":
+{
+	"frame": {"x":445,"y":1,"w":72,"h":72},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":72},
+	"sourceSize": {"w":72,"h":72}
+},
+"forest-urban-04":
+{
+	"frame": {"x":445,"y":75,"w":72,"h":72},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":72},
+	"sourceSize": {"w":72,"h":72}
+},
+"industrial-01":
+{
+	"frame": {"x":445,"y":149,"w":72,"h":72},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":72},
+	"sourceSize": {"w":72,"h":72}
+},
+"livestock-01":
+{
+	"frame": {"x":519,"y":1,"w":72,"h":72},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":72},
+	"sourceSize": {"w":72,"h":72}
+},
+"solar-farm-01":
+{
+	"frame": {"x":519,"y":75,"w":72,"h":72},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":72},
+	"sourceSize": {"w":72,"h":72}
+},
+"urban-high-01":
+{
+	"frame": {"x":519,"y":149,"w":72,"h":72},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":72},
+	"sourceSize": {"w":72,"h":72}
+},
+"urban-low-01":
+{
+	"frame": {"x":593,"y":1,"w":72,"h":72},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":72},
+	"sourceSize": {"w":72,"h":72}
+},
+"urban-mid-01":
+{
+	"frame": {"x":593,"y":75,"w":72,"h":72},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":72},
+	"sourceSize": {"w":72,"h":72}
+},
+"wetlands-01":
+{
+	"frame": {"x":593,"y":149,"w":72,"h":72},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":72},
+	"sourceSize": {"w":72,"h":72}
+},
+"wetlands-02":
+{
+	"frame": {"x":667,"y":1,"w":72,"h":72},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":72},
+	"sourceSize": {"w":72,"h":72}
+},
+"wetlands-03":
+{
+	"frame": {"x":667,"y":75,"w":72,"h":72},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":72},
+	"sourceSize": {"w":72,"h":72}
+},
+"wetlands-04":
+{
+	"frame": {"x":667,"y":149,"w":72,"h":72},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":72},
+	"sourceSize": {"w":72,"h":72}
 }},
 "animations": {
-	"forest": ["forest-01","forest-02","forest-03","forest-04"],
+	"forest-d1": ["forest-d1-01","forest-d1-02","forest-d1-03","forest-d1-04"],
+	"forest-d2": ["forest-d2-01","forest-d2-02","forest-d2-03","forest-d2-04"],
+	"forest-d3": ["forest-d3-01","forest-d3-02","forest-d3-03","forest-d3-04"],
+	"forest-urban": ["forest-urban-01","forest-urban-02","forest-urban-03","forest-urban-04"],
 	"wetlands": ["wetlands-01","wetlands-02","wetlands-03","wetlands-04"]
 },
 "meta": {
@@ -153,8 +252,8 @@
 	"version": "1.1",
 	"image": "landscape.png",
 	"format": "RGBA8888",
-	"size": {"w":444,"h":222},
+	"size": {"w":740,"h":222},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:7221d4609a2d0115203ef503636845c6:5d899508d27da0d73be738b490c176d8:e08cfcfc2519119c193ce8104f3350f4$"
+	"smartupdate": "$TexturePacker:SmartUpdate:0c4054f78116ba9e832e39993f96e1fc:3a9817bba5425df8dc15d12e56791b2f:e08cfcfc2519119c193ce8104f3350f4$"
 }
 }
