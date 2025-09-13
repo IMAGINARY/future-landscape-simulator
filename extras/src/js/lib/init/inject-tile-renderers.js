@@ -17,7 +17,7 @@ function injectTileRenderers(config, mapView) {
 
   mapView.addTileTypeRenderer(cropsTileId, new OrientedTextureTileRenderer(mapView, 'landscape', 'crops'));
   mapView.addTileTypeRenderer(forestTileId, new NatureTileRenderer(config, mapView, 'landscape', 'forest', 4));
-  mapView.addTileTypeRenderer(wetlandsTileId, new RandomTextureTileRenderer(mapView, 'landscape', 'wetlands', 4));
+  mapView.addTileTypeRenderer(wetlandsTileId, new NatureTileRenderer(config, mapView, 'landscape', 'wetlands', 4));
   mapView.addTileTypeRenderer(livestockTileId, new RandomTextureTileRenderer(mapView, 'landscape', 'livestock', 1, true));
   mapView.addTileTypeRenderer(solarFarmTileId, new RandomTextureTileRenderer(mapView, 'landscape', 'solar-farm', 1, true));
   mapView.addTileTypeRenderer(industrialTileId, new RandomTextureTileRenderer(mapView, 'landscape', 'industrial', 1, true));
