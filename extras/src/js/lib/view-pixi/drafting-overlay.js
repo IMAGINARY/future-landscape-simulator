@@ -28,7 +28,7 @@ class DraftingOverlay {
     this.draft.height = this.mapView.city.map.height * MapView.TILE_SIZE;
     this.draft.alpha = 0.75;
 
-    this.mapView.addOverlay(this.displayObject);
+    this.mapView.addGraphicsOverlay(this.displayObject);
   }
 
   setLineMode(endpointMode, crossAlignment) {
