@@ -7,6 +7,7 @@ class FoodProductionData extends DataSource {
     this.city = city;
     this.config = config;
 
+    this.foodProductionMap = Array2D.create(this.city.map.width, this.city.map.height, 0);
     this.totalAnimalFoodProduction = 0;
     this.totalPlantFoodProduction = 0;
     this.totalFeedFoodProduction = 0;
@@ -19,6 +20,7 @@ class FoodProductionData extends DataSource {
 
   getVariables() {
     return {
+      'food-production-map': () => this.foodProductionMap,
       'food-production-total-animal': () => this.totalAnimalFoodProduction,
       'food-production-total-plant': () => this.totalPlantFoodProduction,
       'food-production-total-feed': () => this.totalFeedFoodProduction,
@@ -95,6 +97,10 @@ class FoodProductionData extends DataSource {
         break;
       }
     }
+
+    Array2D.forEach(this.city.map.cells, (v, x, y) => {
+      this.foodProductionMap[y][x] = this.getTileFoodProduction(v, x, y)[1];
+    });
   }
 
   getGoals() {

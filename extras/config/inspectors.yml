@@ -1,0 +1,47 @@
+inspectors:
+  overlay:
+    colors:
+      # Starting with the lowest value (-1), going to the highest (1)
+      'c-4': 0xed1b24
+      'c-3': 0xf36523
+      'c-2': 0xf8931d
+      'c-1': 0xffc20d
+      'c+0': 0xfef200
+      'c+1': 0xcadb2a
+      'c+2': 0x8ec63f
+      'c+3': 0x3ab54b
+      'c+4': 0x008e40
+      'nil': 0xffffff
+    transitionDuration: 1
+  variables:
+    food-production:
+      mapping:
+        'nil': '(-inf, 1)'
+        'c-1': '[1,2)'
+        'c+0': '[2,3)'
+        'c+1': '[3,4)'
+        'c+2': '[4,5)'
+        'c+3': '[5,6)'
+        'c+4': '[6,inf)'
+    biodiversity:
+      mapping:
+        'c-4': '(-inf,-4]'
+        'c-3': '(-4,-3]'
+        'c-2': '(-3,-2]'
+        'c-1': '(-2,-1]'
+        'c+0': '(-1,1)'
+        'c+1': '[1,2)'
+        'c+2': '[2,3)'
+        'c+3': '[3,4)'
+        'c+4': '[4,inf)'
+    carbon:
+      mapping:
+        'c-4': '[5,inf)'
+        'c-3': '[3,5)'
+        'c-2': '[2,3)'
+        'c-1': '[1,2)'
+        'c+0': '(-1,1)'
+        'c+1': '(-2,-1]'
+        'c+2': '(-3,-2]'
+        'c+3': '(-5,-3]'
+        'c+4': '(-inf,-5]'
