@@ -8,6 +8,7 @@
   @include meta.load-css('fls/mod_dashboard_type');
   @include meta.load-css('fls/mod_dashboard_buttons');
   @include meta.load-css('fls/mod_dashboard_smileys');
+  @include meta.load-css('fls/mod_dashboard_actions');
   @include meta.load-css('fls/mod_dashboard_powerup_selector');
   @include meta.load-css('fls/mod_dashboard_animation');
 }

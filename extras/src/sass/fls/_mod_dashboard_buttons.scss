@@ -30,7 +30,7 @@ button {
 
   &.disabled,
   &[disabled] {
-    opacity: 0.8;
+    opacity: 0.5;
 
     .text {
       color: fls-colors.$dark-blue;
@@ -95,6 +95,15 @@ button.btn-show-noise {
   &::after {
     background-image: url('../../static/fls-ui-icons/fls-inspect.svg');
     background-size: 67%;
+  }
+}
+
+.actions-pane {
+  button.btn-dashboard-action {
+    &::after {
+      background-image: url('../../static/fls-ui-icons/fls-inspect-glass.svg');
+      background-size: 67%;
+    }
   }
 }
 

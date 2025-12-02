@@ -65,4 +65,20 @@ dashboard:
         de: 'Deaktivieren'
         en: 'Disable'
   actions:
-    buttons: []
+    title:
+      de: "Untersuchen"
+      en: "Inspect"
+    buttons:
+      - id: mode-food-production
+        text:
+          de: "<span class='large'>Luftverschmutzung</span><br>anzeigen"
+          en: "Food Production"
+      - id: mode-biodiversity
+        text:
+          de: "<span class='large'>Lärmbelastung</span><br>anzeigen"
+          en: "Biodiversity"
+      - id: mode-carbon
+        text:
+          de: "<span class='large'>Lärmbelastung</span><br>anzeigen"
+          en: "Carbon Balance"
+

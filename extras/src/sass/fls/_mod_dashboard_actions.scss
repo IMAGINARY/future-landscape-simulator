@@ -1,0 +1,43 @@
+.row.h-18 {
+
+  .dashboard-title {
+    width: auto;
+    margin: 0 3rem 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    h2 {
+      font-size: 3.3rem;
+      margin-bottom: 0;
+    }
+
+    .dashboard-title-translation {
+      margin-left: 0;
+    }
+  }
+}
+
+#col-actions {
+  display: flex;
+}
+
+.actions-pane {
+  .col-5 {
+    width: auto;
+  }
+
+  button.btn-dashboard-action {
+    padding-left: 16rem !important;
+    background-repeat: no-repeat;
+    background-position: 7.5rem;
+    background-size: 7rem 7rem;
+    .text {
+      display: none;
+    }
+
+    &.disabled {
+
+    }
+  }
+}
