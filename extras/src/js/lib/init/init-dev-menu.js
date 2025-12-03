@@ -24,6 +24,7 @@ function initDevMenu(config, mapView, mapViewModeMgr, mapEditorController, stats
   devMenuBar.addItem('data', 'Biodiversity', () => { dataOverlayController.display('biodiversity-map'); });
   devMenuBar.addItem('data', 'Biodiversity (regions)', () => { dataOverlayController.display('biodiversity-region-map'); });
   devMenuBar.addItem('data', 'Pollution', () => { dataOverlayController.display('pollution-map'); });
+  devMenuBar.addItem('data', 'Food Production', () => { dataOverlayController.display('food-production-map'); });
 
   devMenuBar.addMenu('view', 'View');
   devMenuBar.addItem('view', 'Default', () => {

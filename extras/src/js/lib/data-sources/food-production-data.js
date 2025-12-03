@@ -55,7 +55,7 @@ class FoodProductionData extends DataSource {
         baseProduction = Number(foodProduction?.[`density-${densityMap[y][x]}`] || 0);
       }
     }
-    return ['plant', Math.min(6, Math.max(0, baseProduction + typeBonus))];
+    return [foodType, Math.min(6, Math.max(0, baseProduction + typeBonus))];
   }
 
   calculate() {
