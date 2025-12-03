@@ -31,11 +31,21 @@ class CarbonData extends DataSource {
     }
   }
 
+  getTileCarbon(v, x, y) {
+    const bonuses = this.dataManager.getModifiers('carbon-bonus');
+    const typeBonus = bonuses.reduce((acc, bonus) => {
+      return acc + (bonus[this.config.tileTypes[v].type] || 0);
+    }, 0);
+    let baseValue = this.config.tileTypes?.[v]?.carbon || 0;
+
+    return Math.max(-6, Math.min(6, baseValue + typeBonus));
+  }
+
   calculate() {
     this.solarFarmCount = 0;
     this.forestCount = 0;
     Array2D.forEach(this.city.map.cells, (v, x, y) => {
-      this.carbonMap[y][x] = this.config.tileTypes?.[v]?.carbon || 0;
+      this.carbonMap[y][x] = this.getTileCarbon(v, x, y);
       if (v === this.solarFarmTileId) {
         this.solarFarmCount += 1;
       }

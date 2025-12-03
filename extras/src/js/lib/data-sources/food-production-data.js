@@ -35,20 +35,27 @@ class FoodProductionData extends DataSource {
   getTileFoodProduction(v, x, y) {
     const foodProduction = this.config.tileTypes?.[v]?.food || 0;
     const foodType = this.config.tileTypes?.[v]?.['food-type'] || 'plant';
+    const bonuses = this.dataManager.getModifiers('food-production-bonus');
+    let baseProduction = 0;
+    // Add all the applicable bonuses for the tile type
+    const typeBonus = bonuses.reduce((acc, bonus) => {
+      return acc + (bonus[this.config.tileTypes[v].type] || 0);
+    }, 0);
+
     if (typeof foodProduction === 'number' || typeof foodProduction === 'string') {
-      return [foodType, Number(foodProduction)];
+      baseProduction = Number(foodProduction);
     }
     if (typeof foodProduction === 'object' && foodProduction !== null) {
       const urbanMap = this.dataManager.get('urban-map');
       if (urbanMap?.[y]?.[x] > 0 && foodProduction.urban) {
-        return [foodType, Number(foodProduction.urban)];
+        baseProduction = Number(foodProduction.urban);
       }
       const densityMap = this.dataManager.get('density-map');
       if (densityMap?.[y]?.[x] > 0) {
-        return [foodType, Number(foodProduction?.[`density-${densityMap[y][x]}`] || 0)];
+        baseProduction = Number(foodProduction?.[`density-${densityMap[y][x]}`] || 0);
       }
     }
-    return ['plant', 0];
+    return ['plant', Math.min(6, Math.max(0, baseProduction + typeBonus))];
   }
 
   calculate() {

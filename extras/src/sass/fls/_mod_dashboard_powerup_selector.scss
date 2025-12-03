@@ -29,9 +29,12 @@
   overflow: hidden;
 
   .title {
-    padding-bottom: 2.25rem;
+    padding-top: 1rem;
+    padding-bottom: 0.75rem;
+    margin-bottom: 3rem;
     background-color: fls-colors.$yellow;
     color: fls-colors.$dark-blue;
+    white-space: nowrap;
 
     .text-main,
     .text-translation {
@@ -40,7 +43,7 @@
   }
 
   .description {
-    padding: 2rem 2.5rem;
+    padding: 2rem 1.75rem;
     font-size: fls-type.$small-size;
   }
 
@@ -79,6 +82,10 @@
   .powerup-container {
     padding: 0 1rem;
   }
+
+  .row {
+    height: calc(100% - 11em);
+  }
 }
 
 .powerups-selector-bottom {
@@ -96,6 +103,7 @@
     .title {
       position: relative;
       background-color: transparent;
+      margin-bottom: 1rem;
     }
 
     &::before {

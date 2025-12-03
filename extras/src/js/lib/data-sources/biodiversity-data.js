@@ -32,21 +32,26 @@ class BiodiversityData extends DataSource {
   }
 
   getTileBiodiversity(v, x, y) {
+    const bonuses = this.dataManager.getModifiers('biodiversity-bonus');
+    const typeBonus = bonuses.reduce((acc, bonus) => {
+      return acc + (bonus[this.config.tileTypes[v].type] || 0);
+    }, 0);
+    let baseBiodiversity = 0;
     const biodiversity = this.config.tileTypes?.[v]?.biodiversity || 0;
     if (typeof biodiversity === 'number' || typeof biodiversity === 'string') {
-      return Number(biodiversity);
+      baseBiodiversity = Number(biodiversity);
     }
     if (typeof biodiversity === 'object' && biodiversity !== null) {
       const urbanMap = this.dataManager.get('urban-map');
       if (urbanMap?.[y]?.[x] > 0 && biodiversity.urban) {
-        return Number(biodiversity.urban);
+        baseBiodiversity = Number(biodiversity.urban);
       }
       const densityMap = this.dataManager.get('density-map');
       if (densityMap?.[y]?.[x] > 0) {
-        return Number(biodiversity?.[`density-${densityMap[y][x]}`] || 0);
+        baseBiodiversity = Number(biodiversity?.[`density-${densityMap[y][x]}`] || 0);
       }
     }
-    return 0;
+    return Math.min(6, Math.max(0, baseBiodiversity + typeBonus));
   }
 
   calculate() {

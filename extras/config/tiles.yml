@@ -123,3 +123,4 @@ tileTypes:
     editorIcon: 'static/fa/water-solid.svg'
     carbon: 0
     natureXp: 1
+    biodiversity: 1

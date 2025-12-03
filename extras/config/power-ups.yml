@@ -1,1 +1,122 @@
-powerUps: {}
+powerUps:
+  industrial-agriculture:
+    enabled: true
+    title:
+      en: Industrial agriculture
+      de: Industrielle Landwirtschaft
+    description:
+      en: Maximize food output through high-yield crops, fertilizers, and pesticides.
+      de: Maximale Erträge durch Hochleistungssorten, Dünger und Pestizide.
+    image: industrial-agriculture.png
+    modifiers:
+      food-production-bonus:
+        crops: 2
+      biodiversity-bonus:
+        crops: -2
+  organic-farming:
+    enabled: false
+    title:
+      en: Organic farming
+      de: Bio-Landwirtschaft
+    description:
+      en: Expand the share of crops grown using organic practices.
+      de: Mehr Anbau von Nutzpflanzen nach Bio-Standards.
+  plant-based-diet:
+    enabled: true
+    title:
+      en: Plant-based diet
+      de: Pflanzenbasierte Ernährung
+    description:
+      en: Reduce demand for livestock by shifting diets.
+      de: Weniger Viehhaltung durch eine Umstellung der Ernährung.
+    image: plant-based-diet.png
+    modifiers:
+      food-production-bonus:
+        crops: 1
+      carbon-bonus:
+        livestock: -2
+  farm-to-table:
+    enabled: false
+    title:
+      en: Farm-to-table
+      de: Vom Hof auf den Tisch
+    description:
+      en: Promote local, less-industrial, biodiversity-friendly food production.
+      de: Fördert eine lokale, weniger industrielle und artenfreundliche Lebensmittelerzeugung.
+  agrivoltaics:
+    enabled: true
+    title:
+      en: Agrivoltaics
+      de: Agri-Photovoltaik
+    description:
+      en: Share land for solar panels and grazing livestock.
+      de: Gemeinsam genutzte Flächen für Solarpaneele und Weidevieh.
+    image: agrivoltaics.png
+    modifiers:
+      biodiversity-bonus:
+        solar-farm: 2
+      food-production-bonus:
+        solar-farm: 1
+  diverse-agriculture:
+    enabled: true
+    title:
+      en: Diverse agriculture
+      de: Vielfältige Landwirtschaft
+    description:
+      en: Mix crops, hedgerows, and varied habitats to enhance biodiversity on farmland.
+      de: Mischkulturen, Hecken und vielfältige Lebensräume für mehr Biodiversität.
+    image: diverse-agriculture.png
+    modifiers:
+      biodiversity-bonus:
+        crops: 2
+  acquaculture:
+    enabled: true
+    title:
+      en: Aquaculture
+      de: Aquakultur
+    description:
+      en: Farm fish in controlled water environments.
+      de: Fischzucht in kontrollierten Wassersystemen.
+    image: acquaculture.png
+    modifiers:
+      food-production-bonus:
+        water: 1
+      biodiversity-bonus:
+        water: -1
+  timber-construction:
+    enabled: false
+    title:
+      en: Timber construction
+      de: Holzbau
+    description:
+      en: Construct buildings with timber to store carbon and reduce emissions.
+      de: Bauen mit Holz speichert CO₂ und senkt Emissionen.
+  vertical-farming:
+    enabled: false
+    title:
+      en: Vertical farming
+      de: Vertikale Landwirtschaft
+    description:
+      en: Produce crops indoors in stacked layers using hydroponics.
+      de: Vertikaler Anbau von Nutzpflanzen in Innenräumen ohne Erde (Hydrokultur).
+  biomass-energy:
+    enabled: true
+    title:
+      en: Biomass energy
+      de: Energie aus Biomasse
+    description:
+      en: Generate renewable energy from plant material and organic waste.
+      de: Erzeugt erneuerbare Energie aus Pflanzen und organischen Reststoffen.
+    image: biomass-energy.png
+    modifiers:
+      carbon-bonus:
+        crops: -1
+        forest: -1
+  paludiculture:
+    enabled: false
+    title:
+      en: Paludiculture
+      de: Paludikultur
+    description:
+      en: Grow crops on wetlands to reduce emissions and support biodiversity.
+      de: Landwirtschaft in Feuchtgebieten zur Senkung von Emissionen und für Biodiversität.

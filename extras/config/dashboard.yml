@@ -52,14 +52,14 @@ dashboard:
         en: "Cancel"
     selector:
       # Number of seconds after which the Power-up selector times out
-      timeout: 30
+      timeout: 45
       # If true, the Power-up selector's randomizer will not consider the Power-ups that were used
       # last, unless there are no other Power-ups available.
       hideLastActive: true
     noneActive:
       text:
-        de: 'Power-Ups werden gerade&nbsp;entwickelt.<br>Besuche uns bald wieder!'
-        en: 'Power-Ups are being&nbsp;developed.<br>Visit again soon!'
+        de: 'Keine Power-Ups aktiv'
+        en: 'No Power-Ups active'
     disableButton:
       text:
         de: 'Deaktivieren'
