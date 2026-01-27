@@ -116,11 +116,11 @@ class QualityOfLifeData extends DataSource {
     this.parksPercent = (totalTiles > 0) ? (this.parkTotal / totalTiles) * 100 : 0;
 
     // Calculate the percentage of urban-high tiles relative to total urban tiles
-    const urbanHighCount = this.dataManager.get('zones-urban-high-count') || 0;
+    const urbanHighCount = this.getDataManager().get('zones-urban-high-count') || 0;
     this.urbanHighPercent = (urbanTileCount > 0) ? (urbanHighCount / urbanTileCount) * 100 : 0;
 
     // Calculate this.urbanDensityAvg, the average density of urban areas using the density-map
-    const densityMap = this.dataManager.get('density-map');
+    const densityMap = this.getDataManager().get('density-map');
     let urbanDensitySum = 0;
     if (densityMap) {
       Array2D.forEach(this.city.map.cells, (v, x, y) => {

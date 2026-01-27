@@ -42,11 +42,11 @@ class EconomicGrowthData extends DataSource {
       return Number(productivity);
     }
     if (typeof productivity === 'object' && productivity !== null) {
-      const urbanMap = this.dataManager.get('urban-map');
+      const urbanMap = this.getDataManager().get('urban-map');
       if (urbanMap?.[y]?.[x] > 0 && productivity.urban) {
         return Number(productivity.urban);
       }
-      const densityMap = this.dataManager.get('density-map');
+      const densityMap = this.getDataManager().get('density-map');
       if (densityMap?.[y]?.[x] > 0) {
         return Number(productivity?.[`density-${densityMap[y][x]}`] || 0);
       }

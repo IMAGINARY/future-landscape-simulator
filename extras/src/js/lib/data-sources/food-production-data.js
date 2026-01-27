@@ -35,7 +35,7 @@ class FoodProductionData extends DataSource {
   getTileFoodProduction(v, x, y) {
     const foodProduction = this.config.tileTypes?.[v]?.food || 0;
     const foodType = this.config.tileTypes?.[v]?.['food-type'] || 'plant';
-    const bonuses = this.dataManager.getModifiers('food-production-bonus');
+    const bonuses = this.getDataManager().getModifiers('food-production-bonus');
     let baseProduction = 0;
     // Add all the applicable bonuses for the tile type
     const typeBonus = bonuses.reduce((acc, bonus) => {
@@ -46,11 +46,11 @@ class FoodProductionData extends DataSource {
       baseProduction = Number(foodProduction);
     }
     if (typeof foodProduction === 'object' && foodProduction !== null) {
-      const urbanMap = this.dataManager.get('urban-map');
+      const urbanMap = this.getDataManager().get('urban-map');
       if (urbanMap?.[y]?.[x] > 0 && foodProduction.urban) {
         baseProduction = Number(foodProduction.urban);
       }
-      const densityMap = this.dataManager.get('density-map');
+      const densityMap = this.getDataManager().get('density-map');
       if (densityMap?.[y]?.[x] > 0) {
         baseProduction = Number(foodProduction?.[`density-${densityMap[y][x]}`] || 0);
       }
@@ -61,7 +61,7 @@ class FoodProductionData extends DataSource {
   calculate() {
     // Calculate the demand for livestock feed. Multiply the number of livestock tiles by the feed requirement per tile.
     const feedRequirementPerLivestockTile = Number(this.config.goals?.['food-production']?.['feed-per-livestock-tile']) || 4;
-    const livestockTileCount = this.dataManager.get(`zones-livestock-count`);
+    const livestockTileCount = this.getDataManager().get(`zones-livestock-count`);
     const feedRequired= livestockTileCount * feedRequirementPerLivestockTile;
 
     // Calculate the actual food production
@@ -85,7 +85,7 @@ class FoodProductionData extends DataSource {
 
     this.totalFoodProduction = this.totalAnimalFoodProduction + this.totalPlantFoodProduction - this.totalFeedFoodProduction;
 
-    const population = this.dataManager.get('population-total') || 1;
+    const population = this.getDataManager().get('population-total') || 1;
     this.foodProductionPerCapita = this.totalFoodProduction / population;
     this.foodProductionAnimalPerCapita = this.totalAnimalFoodProduction / population;
 

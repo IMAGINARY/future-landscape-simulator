@@ -32,7 +32,7 @@ class CarbonData extends DataSource {
   }
 
   getTileCarbon(v, x, y) {
-    const bonuses = this.dataManager.getModifiers('carbon-bonus');
+    const bonuses = this.getDataManager().getModifiers('carbon-bonus');
     const typeBonus = bonuses.reduce((acc, bonus) => {
       return acc + (bonus[this.config.tileTypes[v].type] || 0);
     }, 0);

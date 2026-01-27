@@ -32,7 +32,7 @@ class BiodiversityData extends DataSource {
   }
 
   getTileBiodiversity(v, x, y) {
-    const bonuses = this.dataManager.getModifiers('biodiversity-bonus');
+    const bonuses = this.getDataManager().getModifiers('biodiversity-bonus');
     const typeBonus = bonuses.reduce((acc, bonus) => {
       return acc + (bonus[this.config.tileTypes[v].type] || 0);
     }, 0);
@@ -42,11 +42,11 @@ class BiodiversityData extends DataSource {
       baseBiodiversity = Number(biodiversity);
     }
     if (typeof biodiversity === 'object' && biodiversity !== null) {
-      const urbanMap = this.dataManager.get('urban-map');
+      const urbanMap = this.getDataManager().get('urban-map');
       if (urbanMap?.[y]?.[x] > 0 && biodiversity.urban) {
         baseBiodiversity = Number(biodiversity.urban);
       }
-      const densityMap = this.dataManager.get('density-map');
+      const densityMap = this.getDataManager().get('density-map');
       if (densityMap?.[y]?.[x] > 0) {
         baseBiodiversity = Number(biodiversity?.[`density-${densityMap[y][x]}`] || 0);
       }
