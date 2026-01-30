@@ -1,5 +1,6 @@
 const Array2D = require('../data/array-2d');
 const DataSource = require('./data-source');
+const { getTilePropertyValue } = require('../data/fls-tile-property-helpers');
 
 class EconomicGrowthData extends DataSource {
   constructor(city, config) {
@@ -37,21 +38,7 @@ class EconomicGrowthData extends DataSource {
   }
 
   getTileProductivity(v, x, y) {
-    const productivity = this.config.tileTypes?.[v]?.productivity || 0;
-    if (typeof productivity === 'number' || typeof productivity === 'string') {
-      return Number(productivity);
-    }
-    if (typeof productivity === 'object' && productivity !== null) {
-      const urbanMap = this.getDataManager().get('urban-map');
-      if (urbanMap?.[y]?.[x] > 0 && productivity.urban) {
-        return Number(productivity.urban);
-      }
-      const densityMap = this.getDataManager().get('density-map');
-      if (densityMap?.[y]?.[x] > 0) {
-        return Number(productivity?.[`density-${densityMap[y][x]}`] || 0);
-      }
-    }
-    return 0;
+    return getTilePropertyValue(this.config, this.getDataManager(), 'productivity', v, x, y);
   }
 
   calculate() {

@@ -1,6 +1,7 @@
 const Array2D = require('../data/array-2d');
 const { getTileTypeId } = require('../data/config-helpers');
 const DataSource = require('./data-source');
+const { getTilePropertyValue } = require('../data/fls-tile-property-helpers');
 
 class CarbonData extends DataSource {
   constructor(city, config) {
@@ -36,7 +37,7 @@ class CarbonData extends DataSource {
     const typeBonus = bonuses.reduce((acc, bonus) => {
       return acc + (bonus[this.config.tileTypes[v].type] || 0);
     }, 0);
-    let baseValue = this.config.tileTypes?.[v]?.carbon || 0;
+    const baseValue = getTilePropertyValue(this.config, this.getDataManager(), 'carbon', v, x, y);
 
     return Math.max(-6, Math.min(6, baseValue + typeBonus));
   }
