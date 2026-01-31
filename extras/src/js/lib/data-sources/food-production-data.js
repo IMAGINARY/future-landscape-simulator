@@ -1,6 +1,6 @@
 const Array2D = require('../data/array-2d');
 const DataSource = require('./data-source');
-const { getTilePropertyValue } = require('../data/fls-tile-property-helpers');
+const { getTilePropertyValue, getTileTypeModifiers } = require('../data/fls-tile-property-helpers');
 
 class FoodProductionData extends DataSource {
   constructor(city, config) {
@@ -35,11 +35,7 @@ class FoodProductionData extends DataSource {
 
   getTileFoodProduction(v, x, y) {
     const foodType = this.config.tileTypes?.[v]?.['food-type'] || 'plant';
-    const bonuses = this.getDataManager().getModifiers('food-production-bonus');
-    // Add all the applicable bonuses for the tile type
-    const typeBonus = bonuses.reduce((acc, bonus) => {
-      return acc + (bonus[this.config.tileTypes[v].type] || 0);
-    }, 0);
+    const typeBonus = getTileTypeModifiers(this.getDataManager(), 'food-production-bonus', this.config.tileTypes[v].type);
     const baseProduction = getTilePropertyValue(this.config, this.getDataManager(), 'food', v, x, y);
     return [foodType, Math.min(6, Math.max(0, baseProduction + typeBonus))];
   }

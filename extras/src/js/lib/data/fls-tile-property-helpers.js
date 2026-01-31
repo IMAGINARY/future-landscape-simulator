@@ -32,4 +32,20 @@ function getTilePropertyValue(config, dataManager, propertyName, v, x, y) {
   return 0;
 }
 
-module.exports = { getTilePropertyValue };
+/**
+ * Get the total modifiers for a specific tile type from all applicable modifiers.
+ *
+ * @param {DataManager} dataManager - The data manager instance
+ * @param {string} id - The modifier ID to look up
+ * @param {string} tileType - The tile type (e.g., 'residential', 'commercial', etc.)
+ */
+function getTileTypeModifiers(dataManager, id, tileType) {
+  const bonuses = dataManager.getModifiers(id);
+  const typeBonus = bonuses.reduce((acc, bonus) => {
+    return acc + (bonus?.[tileType] || 0);
+  }, 0);
+
+  return typeBonus;
+}
+
+module.exports = { getTilePropertyValue, getTileTypeModifiers };

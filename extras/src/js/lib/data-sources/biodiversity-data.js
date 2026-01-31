@@ -1,7 +1,7 @@
 const DataSource = require('./data-source');
 const Array2D = require('../data/array-2d');
 const { getTileTypeId } = require('../data/config-helpers');
-const { getTilePropertyValue } = require('../data/fls-tile-property-helpers');
+const { getTilePropertyValue, getTileTypeModifiers } = require('../data/fls-tile-property-helpers');
 
 class BiodiversityData extends DataSource {
   constructor(city, config) {
@@ -33,10 +33,7 @@ class BiodiversityData extends DataSource {
   }
 
   getTileBiodiversity(v, x, y) {
-    const bonuses = this.getDataManager().getModifiers('biodiversity-bonus');
-    const typeBonus = bonuses.reduce((acc, bonus) => {
-      return acc + (bonus[this.config.tileTypes[v].type] || 0);
-    }, 0);
+    const typeBonus = getTileTypeModifiers(this.getDataManager(), 'biodiversity-bonus', this.config.tileTypes[v].type);
     const baseBiodiversity = getTilePropertyValue(this.config, this.getDataManager(), 'biodiversity', v, x, y);
     return Math.min(6, Math.max(0, baseBiodiversity + typeBonus));
   }
