@@ -13,7 +13,7 @@
   "scripts": {
     "watch:copy": "cpx './extras/**' './future-mobility/' -vw",
     "watch:compile": "cd ./future-mobility && npm run watch",
-    "build": "rm -rf ./future-mobility && degit github:IMAGINARY/future-mobility#v1.0.0-dev.16 --force future-mobility && cp -R ./extras/. ./future-mobility/. && cd ./future-mobility && npm install && npm run build && cd ./server && npm install && cd .. && cd ..",
+    "build": "rm -rf ./future-mobility && degit github:IMAGINARY/future-mobility#v1.0.0-dev.17 --force future-mobility && cp -R ./extras/. ./future-mobility/. && cd ./future-mobility && npm install && npm run build && cd ./server && npm install && cd .. && cd ..",
     "server": "cd ./future-mobility/server && npm run start",
     "server (dev)": "cd ./future-mobility/server && npm run start -- -o --debug-level=verbose"
   },
