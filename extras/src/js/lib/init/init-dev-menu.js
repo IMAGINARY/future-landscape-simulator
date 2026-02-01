@@ -17,6 +17,7 @@ function initDevMenu(config, mapView, mapViewModeMgr, mapEditorController, stats
   devMenuBar.addMenu('data', 'Data');
   devMenuBar.addItem('data', 'Default', () => { dataOverlayController.hide(); mapViewModeMgr.setMode('default');});
   devMenuBar.addItem('data', 'Density', () => { dataOverlayController.display('density-map'); });
+  devMenuBar.addItem('data', 'Regions', () => { dataOverlayController.display('region-map'); });
   devMenuBar.addItem('data', 'Urban area', () => { dataOverlayController.display('urban-map'); });
   devMenuBar.addItem('data', 'Productivity', () => { dataOverlayController.display('productivity-map'); });
   devMenuBar.addItem('data', 'Productive Capacity', () => { dataOverlayController.display('productive-capacity-map'); });

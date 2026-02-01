@@ -1,6 +1,7 @@
 const ZoningData = require('../data-sources/zoning-data');
 const UrbanData = require('../data-sources/urban-data');
 const DensityData = require('../data-sources/density-data');
+const RegionData = require('../data-sources/region-data');
 const PopulationData = require('../data-sources/population-data');
 const CarbonData = require('../data-sources/carbon-data');
 const EconomicGrowthData = require('../data-sources/economic-growth-data');
@@ -13,6 +14,7 @@ const dataSrcCfg = {
     ZoningData,
     UrbanData,
     DensityData,
+    RegionData,
     PopulationData,
     CarbonData,
     EconomicGrowthData,
