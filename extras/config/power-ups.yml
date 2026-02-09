@@ -31,8 +31,7 @@ powerUps:
       de: Weniger Viehhaltung durch eine Umstellung der Ernährung.
     image: plant-based-diet.png
     modifiers:
-      food-production-bonus:
-        crops: 1
+      plant-based-diet-bonus: 3
       carbon-bonus:
         livestock: -2
   farm-to-table:
@@ -53,10 +52,12 @@ powerUps:
       de: Gemeinsam genutzte Flächen für Solarpaneele und Weidevieh.
     image: agrivoltaics.png
     modifiers:
+      food:
+        solar-farm: 2
+      food-type:
+        solar-farm: animal
       biodiversity-bonus:
         solar-farm: 2
-      food-production-bonus:
-        solar-farm: 1
   diverse-agriculture:
     enabled: true
     title:
@@ -79,8 +80,10 @@ powerUps:
       de: Fischzucht in kontrollierten Wassersystemen.
     image: acquaculture.png
     modifiers:
-      food-production-bonus:
-        water: 1
+      food:
+        water: 3
+      food-type:
+        water: animal
       biodiversity-bonus:
         water: -1
   timber-construction:
@@ -99,6 +102,13 @@ powerUps:
     description:
       en: Produce crops indoors in stacked layers using hydroponics.
       de: Vertikaler Anbau von Nutzpflanzen in Innenräumen ohne Erde (Hydrokultur).
+    modifiers:
+      food:
+        urban-mid: 1
+        urban-high: 2
+      food-type:
+        urban-mid: plant
+        urban-high: plant
   biomass-energy:
     enabled: true
     title:
@@ -120,3 +130,8 @@ powerUps:
     description:
       en: Grow crops on wetlands to reduce emissions and support biodiversity.
       de: Landwirtschaft in Feuchtgebieten zur Senkung von Emissionen und für Biodiversität.
+    modifiers:
+      food:
+        wetlands: 2
+      food-type:
+        wetlands: plant

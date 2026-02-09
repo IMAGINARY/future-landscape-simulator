@@ -73,9 +73,10 @@ tileTypes:
     editorIcon: 'static/fa/cow-solid-full.svg'
     carbon: 5
     productivity: 3
-    food: 6
+    food: 4
     food-type: animal
     pollution: 1
+    feed-requirement: 2
   14:
     type: urban-low
     name: Urban (Low)

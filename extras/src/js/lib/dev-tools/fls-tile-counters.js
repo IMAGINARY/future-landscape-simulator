@@ -33,19 +33,19 @@ const biodiversityCounter = {
   }
 }
 
-const foodPerCapitaCounter = {
-  id: 'food-per-capita',
-  label: 'Food per Capita (Animal)',
+const foodRequirementCounter = {
+  id: 'food-requirement',
+  label: 'Req: 🌾|🥕|🐮',
   calculate: (stats) => {
-    return `${(stats.get('food-production-per-capita')).toFixed(2)} (${(stats.get('food-production-animal-per-capita')).toFixed(2)})`;
+    return `${(stats.get('food-production-feed-requirement')).toFixed(2)} | ${(stats.get('food-production-plant-requirement')).toFixed(2)} | ${(stats.get('food-production-animal-requirement')).toFixed(2)}`;
   },
 }
 
 const foodProductionCounter = {
   id: 'food-production',
-  label: 'Plant / Animal / Feed',
+  label: 'Prod: 🚜|🥕|🐮',
   calculate: (stats) => {
-    return `${(stats.get('food-production-total-plant')).toFixed(2)} / ${(stats.get('food-production-total-animal')).toFixed(2)} / ${(stats.get('food-production-total-feed')).toFixed(2)} (${(stats.get('food-production-feed-percent-satisfied')).toFixed(2)}%)`;
+    return `${(stats.get('food-production-crops')).toFixed(2)} | ${(stats.get('food-production-plant')).toFixed(2)} | ${(stats.get('food-production-animal')).toFixed(2)}`;
   }
 }
 
@@ -81,4 +81,4 @@ const urbanDensityCounter = {
   }
 }
 
-module.exports = { populationCounter, averageCarbonCounter, productivityCounter, biodiversityCounter, foodPerCapitaCounter, foodProductionCounter, averageUrbanPollutionCounter, natureUrbanXpCounter, parkCounter, urbanDensityCounter };
+module.exports = { populationCounter, averageCarbonCounter, productivityCounter, biodiversityCounter, foodRequirementCounter, foodProductionCounter, averageUrbanPollutionCounter, natureUrbanXpCounter, parkCounter, urbanDensityCounter };

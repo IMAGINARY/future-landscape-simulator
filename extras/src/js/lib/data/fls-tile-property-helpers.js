@@ -1,4 +1,21 @@
 /**
+ * Returns a table indexed by tile type for the given property
+ *
+ * @param config
+ * @param propertyName
+ */
+function getTilePropertyTable(config, propertyName) {
+  const answer = {};
+  Object.entries(config).forEach(([id, def]) => {
+    if (def[propertyName] !== undefined) {
+      answer[id] = def[propertyName];
+    }
+  });
+
+  return answer;
+}
+
+/**
  * Get the base value of a tile property from config, handling both
  * scalar values and object values with urban/density variants.
  *
@@ -48,4 +65,8 @@ function getTileTypeModifiers(dataManager, id, tileType) {
   return typeBonus;
 }
 
-module.exports = { getTilePropertyValue, getTileTypeModifiers };
+module.exports = {
+  getTilePropertyTable,
+  getTilePropertyValue,
+  getTileTypeModifiers
+};

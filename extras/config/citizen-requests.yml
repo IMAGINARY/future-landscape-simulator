@@ -34,12 +34,22 @@ citizenRequests:
     de: "Für unser Wirtschaftswachstum brauchen wir mehr Fabriken, große Bauernhöfe und Wälder."
     group: economy
     urgent: false
-  sufficient-food-production:
+  food-plant-half-requirement:
+    en: "We don’t produce enough food for our population. We should use more land for farming."
+    de: "Unsere Lebensmittelproduktion reicht für die Bevölkerung nicht aus. Wir sollten mehr Land für Landwirtschaft nutzen."
+    group: food-production
+    urgent: true
+  food-animal-half-requirement:
+    en: "We are not producing enough meat, dairy and eggs to meet the demand. We need more livestock farms."
+    de: "Wir produzieren nicht genug Fleisch, Eier und Milch. Wir brauchen mehr Viehhaltung."
+    group: food-production
+    urgent: true
+  food-plant-full-requirement:
     en: "We don’t produce enough food for our population. We should use more land for farming."
     de: "Unsere Lebensmittelproduktion reicht für die Bevölkerung nicht aus. Wir sollten mehr Land für Landwirtschaft nutzen."
     group: food-production
     urgent: false
-  sufficient-animal-food-production:
+  food-animal-full-requirement:
     en: "We are not producing enough meat, dairy and eggs to meet the demand. We need more livestock farms."
     de: "Wir produzieren nicht genug Fleisch, Eier und Milch. Wir brauchen mehr Viehhaltung."
     group: food-production
