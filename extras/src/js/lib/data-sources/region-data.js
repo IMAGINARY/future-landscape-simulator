@@ -23,14 +23,15 @@ class RegionData extends DataSource {
     const densityMap = this.getDataManager().get('density-map');
     const { width, height } = this.city.map;
 
-    // Build auxiliary array with composite strings "<cellTypeId>:<mod>"
+    // Build auxiliary array with composite strings "<cellTypeId>:<mod>:<orientation>"
     const auxArray = Array2D.create(width, height, '');
     const uniqueValues = new Set();
 
     Array2D.forEach(this.city.map.cells, (cellTypeId, x, y) => {
       const isUrban = urbanMap[y][x] > 0;
       const mod = isUrban ? 'u' : densityMap[y][x];
-      const compositeKey = `${cellTypeId}:${mod}`;
+      const orientation = this.city.getCellOrientation(x, y);
+      const compositeKey = `${cellTypeId}:${mod}:${orientation}`;
       auxArray[y][x] = compositeKey;
       uniqueValues.add(compositeKey);
     });
