@@ -32,6 +32,14 @@ class UrbanData extends DataSource {
         this.urbanMap[y][x] = adjacentUrban ? 1 : 0;
       }
     });
+
+    // Set tags
+    const tagMap = this.getDataManager().tagMap;
+    Array2D.forEach(this.urbanMap, (isUrban, x, y) => {
+      if (isUrban) {
+        tagMap.set(x, y, 'urban');
+      }
+    });
   }
 }
 

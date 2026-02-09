@@ -19,6 +19,11 @@ class DensityData extends DataSource {
 
   calculate() {
     calculateDensityMap(this.city.map.cells, this.densityMap);
+    // Set tags
+    const tagMap = this.getDataManager().tagMap;
+    Array2D.forEach(this.densityMap, (density, x, y) => {
+      tagMap.set(x, y, `density-${density}`);
+    });
   }
 }
 

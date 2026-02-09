@@ -50,6 +50,25 @@ class RegionData extends DataSource {
     Array2D.forEach(rawRegionMap, (regionRef, x, y) => {
       this.regionMap[y][x] = regionRef === null ? -1 : regionIndexMap.get(regionRef);
     });
+
+    // Add tags based on region size
+    const sRegionMaxSize = 2;
+    const mRegionMaxSize = 4;
+
+    const tagMap = this.getDataManager().tagMap;
+    Array2D.forEach(this.regionMap, (x, y) => {
+      const regionIdx = this.regionMap[y][x];
+      if (regionIdx >= 0) {
+        const regionSize = this.regions[regionIdx].length;
+        if (regionSize <= sRegionMaxSize) {
+          tagMap.set(x, y, 'region-s');
+        } else if (regionSize <= mRegionMaxSize) {
+          tagMap.set(x, y, 'region-m');
+        } else {
+          tagMap.set(x, y, 'region-l');
+        }
+      }
+    });
   }
 }
 
