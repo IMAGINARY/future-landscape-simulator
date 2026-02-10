@@ -1,5 +1,6 @@
 const TagMatcher = require('../data/tag-matcher');
 const { isObject } = require('../helpers/types');
+const { getTileTypeId } = require('./config-helpers');
 
 class FlsDataSourceHelper {
   constructor(config, dataManager) {
@@ -33,7 +34,8 @@ class FlsDataSourceHelper {
     this.dataManager
       .getModifiers(propertyName)
       .forEach((modifier) => {
-        Object.entries(modifier).forEach(([typeId, def]) => {
+        Object.entries(modifier).forEach(([typeName, def]) => {
+          const typeId = getTileTypeId(this.config, typeName);
           const rules = isObject(def) ? def : { '*' : def };
           table[typeId] = new TagMatcher(rules);
         });
@@ -57,7 +59,8 @@ class FlsDataSourceHelper {
     this.dataManager
       .getModifiers(bonusId)
       .forEach((modifier) => {
-        Object.entries(modifier).forEach(([typeId, def]) => {
+        Object.entries(modifier).forEach(([typeName, def]) => {
+          const typeId = getTileTypeId(this.config, typeName);
           const rules = isObject(def) ? def : { '*' : def };
           if (!table[typeId]) {
             table[typeId] = [];
