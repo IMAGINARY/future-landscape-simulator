@@ -56,7 +56,7 @@ class RegionData extends DataSource {
     const mRegionMaxSize = 4;
 
     const tagMap = this.getDataManager().tagMap;
-    Array2D.forEach(this.regionMap, (x, y) => {
+    Array2D.forEach(this.regionMap, (v, x, y) => {
       const regionIdx = this.regionMap[y][x];
       if (regionIdx >= 0) {
         const regionSize = this.regions[regionIdx].length;
