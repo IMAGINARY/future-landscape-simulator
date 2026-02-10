@@ -12,7 +12,10 @@ powerUps:
       food-production-bonus:
         crops: 2
       biodiversity-bonus:
-        crops: -2
+        crops:
+          region-s: -1
+          region-m: -2
+          region-l: -2
   organic-farming:
     enabled: false
     title:
@@ -69,7 +72,9 @@ powerUps:
     image: diverse-agriculture.png
     modifiers:
       biodiversity-bonus:
-        crops: 2
+        crops:
+          region-s: 1
+          region-m: 1
   acquaculture:
     enabled: true
     title:

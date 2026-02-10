@@ -20,19 +20,19 @@ goals:
       2: 0.2
   biodiversity:
     # Minimum biodiversity value for a tile to be considered "high biodiversity"
-    high-biodiversity-threshold: 4
+    high-biodiversity-threshold: 5
     # Minium acceptable biodiversity value
-    min-acceptable-biodiversity: 2
+    min-acceptable-biodiversity: 3
     # Percentage of tiles that should have high biodiversity to raise the index by
     # n points
     index-high-biodiversity-percentage:
-      2: 5
+      2: 4
       1: 2
     # Percentage of regions (4x4 tile blocks) that should have acceptable biodiversity to raise the
     # index by n points
     index-region-biodiversity-percentage:
-      2: 75
-      1: 50
+      2: 60
+      1: 30
   food-production:
     # Maximum percentage of plant-based food grown that might be used for feed
     max-feed-percentage: 50

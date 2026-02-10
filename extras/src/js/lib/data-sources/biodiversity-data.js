@@ -1,13 +1,14 @@
 const DataSource = require('./data-source');
 const Array2D = require('../data/array-2d');
-const { getTileTypeId } = require('../data/config-helpers');
-const { getTilePropertyValue, getTileTypeModifiers } = require('../data/fls-tile-property-helpers');
+const { clamp } = require('../helpers/math');
+const FlsDataSourceHelper = require('../data/fls-data-source-helper');
 
 class BiodiversityData extends DataSource {
   constructor(city, config) {
     super(city, config);
     this.city = city;
     this.config = config;
+    this.helper = null;
 
     this.biodiversityMap = Array2D.create(this.city.map.width, this.city.map.height, 0);
     this.biodiversity = [];
@@ -17,6 +18,11 @@ class BiodiversityData extends DataSource {
     this.biodiversityRegionMap = Array2D.create(this.city.map.width, this.city.map.height, 0);
     this.biodiversityRegionAcceptableCount = 0;
     this.biodiversityRegionAcceptablePercent = 0;
+  }
+
+  onRegistered(dataManager) {
+    super.onRegistered(dataManager);
+    this.helper = new FlsDataSourceHelper(this.config, this.getDataManager());
   }
 
   getVariables() {
@@ -32,16 +38,19 @@ class BiodiversityData extends DataSource {
     };
   }
 
-  getTileBiodiversity(v, x, y) {
-    const typeBonus = getTileTypeModifiers(this.getDataManager(), 'biodiversity-bonus', this.config.tileTypes[v].type);
-    const baseBiodiversity = getTilePropertyValue(this.config, this.getDataManager(), 'biodiversity', v, x, y);
-    return Math.min(6, Math.max(0, baseBiodiversity + typeBonus));
-  }
-
   calculate() {
+    const tagMap = this.getDataManager().tagMap;
+    const cityMap = this.city.map;
+
+    const baseTable = this.helper.getPropertyTable('biodiversity');
+    const bonusTable = this.helper.getBonusTable('biodiversity-bonus');
+
+    tagMap.set(0, 0, 'region-s');
     // Biodiversity
     Array2D.forEach(this.city.map.cells, (v, x, y) => {
-      this.biodiversityMap[y][x] = this.getTileBiodiversity(v, x, y);
+      const baseValue = baseTable[v]?.match(tagMap, x, y) || 0;
+      const bonusValue = bonusTable[v]?.reduce((acc, matcher) => acc + ((matcher.match(tagMap, x, y) || 0)), 0) || 0;
+      this.biodiversityMap[y][x] = clamp(baseValue + bonusValue, 0, 6);
     });
     this.biodiversity = Array2D.flatten(this.biodiversityMap);
 
