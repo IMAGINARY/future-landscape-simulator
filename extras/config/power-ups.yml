@@ -125,8 +125,14 @@ powerUps:
     image: biomass-energy.png
     modifiers:
       carbon-bonus:
-        crops: -1
-        forest: -1
+        crops:
+          'density-2': -2
+          'density-3': -2
+          '*': -1
+        forest:
+          'density-2': -2
+          'density-3': -2
+          '*': -1
   paludiculture:
     enabled: false
     title:

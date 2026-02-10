@@ -2,12 +2,16 @@ const Array2D = require('../data/array-2d');
 const { getTileTypeId } = require('../data/config-helpers');
 const DataSource = require('./data-source');
 const { getTilePropertyValue, getTileTypeModifiers } = require('../data/fls-tile-property-helpers');
+const { clamp } = require('../helpers/math');
+const FlsDataSourceHelper = require('../data/fls-data-source-helper');
 
 class CarbonData extends DataSource {
   constructor(city, config) {
     super(city, config);
     this.city = city;
     this.config = config;
+    this.helper = null;
+
     this.avgCarbon = 0;
     this.carbonMap = Array2D.create(this.city.map.width, this.city.map.height, 0);
     this.carbon = [];
@@ -23,6 +27,11 @@ class CarbonData extends DataSource {
       .sort((a, b) => b - a);
   }
 
+  onRegistered(dataManager) {
+    super.onRegistered(dataManager);
+    this.helper = new FlsDataSourceHelper(this.config, this.getDataManager());
+  }
+
   getVariables() {
     return {
       'carbon-map': () => this.carbonMap,
@@ -32,18 +41,20 @@ class CarbonData extends DataSource {
     }
   }
 
-  getTileCarbon(v, x, y) {
-    const typeBonus = getTileTypeModifiers(this.getDataManager(), 'carbon-bonus', this.config.tileTypes[v].type);
-    const baseValue = getTilePropertyValue(this.config, this.getDataManager(), 'carbon', v, x, y);
-
-    return Math.max(-6, Math.min(6, baseValue + typeBonus));
-  }
-
   calculate() {
+    const tagMap = this.getDataManager().tagMap;
+    const cityMap = this.city.map;
+
+    const baseTable = this.helper.getPropertyTable('carbon');
+    const bonusTable = this.helper.getBonusTable('carbon-bonus');
+
     this.solarFarmCount = 0;
     this.forestCount = 0;
     Array2D.forEach(this.city.map.cells, (v, x, y) => {
-      this.carbonMap[y][x] = this.getTileCarbon(v, x, y);
+      const baseValue = baseTable[v]?.match(tagMap, x, y) || 0;
+      const bonusValue = bonusTable[v]?.reduce((acc, matcher) => acc + ((matcher.match(tagMap, x, y) || 0)), 0) || 0;
+      this.carbonMap[y][x] = clamp(baseValue + bonusValue, -6, 6);
+
       if (v === this.solarFarmTileId) {
         this.solarFarmCount += 1;
       }
@@ -51,6 +62,7 @@ class CarbonData extends DataSource {
         this.forestCount += 1;
       }
     });
+
     this.carbon = Array2D.flatten(this.carbonMap);
     this.avgCarbon = this.carbon.reduce((a, b) => a + b, 0) / this.carbon.length;
     this.carbonIndex = this.calculateCarbonIndex();
