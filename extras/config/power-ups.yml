@@ -17,13 +17,30 @@ powerUps:
           region-m: -2
           region-l: -2
   organic-farming:
-    enabled: false
+    enabled: true
     title:
       en: Organic farming
       de: Bio-Landwirtschaft
     description:
       en: Expand the share of crops grown using organic practices.
       de: Mehr Anbau von Nutzpflanzen nach Bio-Standards.
+    image: organic-farming.png
+    modifiers:
+      carbon-bonus:
+        crops:
+          urban: 0
+          density-1: -1
+          density-2: -1
+          density-3: -1
+          '*': 0
+      food-production-bonus:
+        crops:
+          urban: 0
+          density-1: 0
+          density-2: -1
+          density-3: -1
+      biodiversity-bonus:
+        crops: 1
   plant-based-diet:
     enabled: true
     title:
@@ -38,13 +55,29 @@ powerUps:
       carbon-bonus:
         livestock: -2
   farm-to-table:
-    enabled: false
+    enabled: true
     title:
       en: Farm-to-table
       de: Vom Hof auf den Tisch
     description:
       en: Promote local, less-industrial, biodiversity-friendly food production.
       de: Fördert eine lokale, weniger industrielle und artenfreundliche Lebensmittelerzeugung.
+    image: farm-to-table.png
+    modifiers:
+      carbon-bonus:
+        crops:
+          region-s: -1
+          '*': 0
+      food-production-bonus:
+        crops:
+          urban: 1
+          region-s: 1
+          '*': 0
+      biodiversity-bonus:
+        crops:
+          urban: 1
+          region-s: 1
+          '*': 0
   agrivoltaics:
     enabled: true
     title:
@@ -86,27 +119,34 @@ powerUps:
     image: acquaculture.png
     modifiers:
       food:
-        water: 3
+        water: 2
       food-type:
         water: animal
       biodiversity-bonus:
         water: -1
   timber-construction:
-    enabled: false
+    enabled: true
     title:
       en: Timber construction
       de: Holzbau
     description:
       en: Construct buildings with timber to store carbon and reduce emissions.
       de: Bauen mit Holz speichert CO₂ und senkt Emissionen.
+    image: timber-construction.png
+    modifiers:
+      carbon-bonus:
+        urban-low: -1
+        urban-mid: -2
+        urban-high: -3
   vertical-farming:
-    enabled: false
+    enabled: true
     title:
       en: Vertical farming
       de: Vertikale Landwirtschaft
     description:
       en: Produce crops indoors in stacked layers using hydroponics.
       de: Vertikaler Anbau von Nutzpflanzen in Innenräumen ohne Erde (Hydrokultur).
+    image: vertical-farming.png
     modifiers:
       food:
         urban-mid: 1
@@ -114,6 +154,9 @@ powerUps:
       food-type:
         urban-mid: plant
         urban-high: plant
+      carbon-bonus:
+        urban-mid: 1
+        urban-high: 1
   biomass-energy:
     enabled: true
     title:
@@ -134,13 +177,14 @@ powerUps:
           'density-3': -2
           '*': -1
   paludiculture:
-    enabled: false
+    enabled: true
     title:
       en: Paludiculture
       de: Paludikultur
     description:
       en: Grow crops on wetlands to reduce emissions and support biodiversity.
       de: Landwirtschaft in Feuchtgebieten zur Senkung von Emissionen und für Biodiversität.
+    image: paludiculture.png
     modifiers:
       food:
         wetlands: 2
