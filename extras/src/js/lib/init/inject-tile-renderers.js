@@ -1,5 +1,6 @@
 const { getTileTypeId } = require('../data/config-helpers');
 const RandomTextureTileRenderer = require('../tile-renderers/random-texture-tile-renderer');
+const WaterTileRenderer = require('../tile-renderers/water-tile-renderer');
 const OrientedTextureTileRenderer = require('../tile-renderers/oriented-texture-tile-renderer');
 const NatureTileRenderer = require('../tile-renderers/nature-tile-renderer');
 
@@ -24,7 +25,7 @@ function injectTileRenderers(config, mapView) {
   mapView.addTileTypeRenderer(urbanHighTileId, new RandomTextureTileRenderer(mapView, 'landscape', 'urban-high', 1, true));
   mapView.addTileTypeRenderer(urbanMidTileId, new RandomTextureTileRenderer(mapView, 'landscape', 'urban-mid', 1, true));
   mapView.addTileTypeRenderer(urbanLowTileId, new RandomTextureTileRenderer(mapView, 'landscape', 'urban-low', 1, true));
-  mapView.addTileTypeRenderer(waterTileId, new RandomTextureTileRenderer(mapView, 'water', 'water', 8));
+  mapView.addTileTypeRenderer(waterTileId, new WaterTileRenderer(mapView, waterTileId));
 }
 
 module.exports = injectTileRenderers;
