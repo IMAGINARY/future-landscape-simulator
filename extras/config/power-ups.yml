@@ -108,7 +108,7 @@ powerUps:
         crops:
           region-s: 1
           region-m: 1
-  acquaculture:
+  aquaculture:
     enabled: true
     title:
       en: Aquaculture
@@ -116,7 +116,7 @@ powerUps:
     description:
       en: Farm fish in controlled water environments.
       de: Fischzucht in kontrollierten Wassersystemen.
-    image: acquaculture.png
+    image: aquaculture.png
     modifiers:
       food:
         water: 2
