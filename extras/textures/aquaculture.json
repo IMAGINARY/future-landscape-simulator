@@ -1,0 +1,20 @@
+{"frames": {
+
+"aquaculture":
+{
+	"frame": {"x":1,"y":1,"w":38,"h":38},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":38},
+	"sourceSize": {"w":38,"h":38}
+}},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.1",
+	"image": "aquaculture.png",
+	"format": "RGBA8888",
+	"size": {"w":40,"h":40},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:dbb03942abca5abae58200332813f08f:59f417081c840aa654e9daa5c5bdc171:2aec461ca29d261ee1ce4dbd1c1dd375$"
+}
+}

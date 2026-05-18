@@ -3,10 +3,12 @@ const DraftingOverlay = require('../view-pixi/drafting-overlay');
 const MapTextOverlay = require('../view-pixi/map-text-overlay');
 const Array2D = require('../data/array-2d');
 const calculateDensityMap = require('../model/calculate-density-map');
+const AquacultureHandler = require('../power-ups/aquaculture-handler');
 
 const qs = new URLSearchParams(window.location.search);
 
 function injectMapViewExtensions(config, textures, mapView, powerUpViewMgr) {
+  powerUpViewMgr.registerHandler(new AquacultureHandler(config, mapView));
 
   if (qs.get('dev-routes')) {
     const draftingOverlay = new DraftingOverlay(config, mapView);

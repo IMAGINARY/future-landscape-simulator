@@ -117,6 +117,18 @@ powerUps:
       en: Farm fish in controlled water environments.
       de: Fischzucht in kontrollierten Wassersystemen.
     image: aquaculture.png
+    settings:
+      max-coverage: 0.3333
+      restricted-adjacent-types:
+        - urban-low
+        - urban-mid
+        - urban-high
+      preferred-scores:
+        livestock: 1.5
+        crops: 1
+        industrial: 0.5
+        solar-farm: 0.5
+        water: 0.5
     modifiers:
       food:
         water: 2
