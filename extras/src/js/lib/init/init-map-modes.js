@@ -1,16 +1,13 @@
 const StaticVariableMapViewModeHandler = require('../view-pixi/map-view-mode-handlers/map-view-mode-static-var-map-handler');
 const IconMapViewModeHandler = require('../view-pixi/map-view-mode-handlers/map-view-mode-icon-map-handler');
 const CompositeMapViewModeHandler = require('../view-pixi/map-view-mode-handlers/map-view-mode-composite-handler');
-const Array2D = require('../data/array-2d');
-const { getTileTypeId } = require('../data/config-helpers');
+const { buildCropIconMap } = require('../data/crop-icon-mapper');
 
 function initMapModes(config, mapView, mapViewModeMgr) {
   const varMapHandler = new StaticVariableMapViewModeHandler(config, mapView);
 
-  const cropIconMapper = function cropIconMapper(data) {
-    const cropsId = getTileTypeId(this.config, 'crops');
-    const cityMap = this.mapView.city.map;
-    return Array2D.map(data, (_value, x, y) => (cityMap.get(x, y) === cropsId ? 'apple' : null));
+  const cropIconMapper = function cropIconMapper() {
+    return buildCropIconMap(this.config, this.mapView.city);
   };
 
   const cropIconHandler = new IconMapViewModeHandler(config, mapView, {
