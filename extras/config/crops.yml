@@ -1,0 +1,8 @@
+crops:
+  priorities:
+    - wheat
+    - hay
+    - [sugar-beet, corn, apple, strawberry]
+    - [potato, carrot, onion]
+    - [cabbage, lettuce, cucumber, peas]
+    - [asparagus, pear, cherry]

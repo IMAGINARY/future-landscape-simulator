@@ -1,0 +1,140 @@
+{"frames": {
+
+"apple":
+{
+	"frame": {"x":281,"y":141,"w":60,"h":65},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":6,"y":2,"w":60,"h":65},
+	"sourceSize": {"w":72,"h":72}
+},
+"asparagus":
+{
+	"frame": {"x":1,"y":147,"w":57,"h":71},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":10,"y":1,"w":57,"h":71},
+	"sourceSize": {"w":72,"h":72}
+},
+"cabbage":
+{
+	"frame": {"x":1,"y":1,"w":70,"h":70},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":1,"y":1,"w":70,"h":70},
+	"sourceSize": {"w":72,"h":72}
+},
+"carrot":
+{
+	"frame": {"x":139,"y":73,"w":66,"h":68},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":4,"y":0,"w":66,"h":68},
+	"sourceSize": {"w":72,"h":72}
+},
+"cherry":
+{
+	"frame": {"x":215,"y":143,"w":61,"h":64},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":6,"y":5,"w":61,"h":64},
+	"sourceSize": {"w":72,"h":72}
+},
+"corn":
+{
+	"frame": {"x":210,"y":1,"w":66,"h":65},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":3,"y":4,"w":66,"h":65},
+	"sourceSize": {"w":72,"h":72}
+},
+"cucumber":
+{
+	"frame": {"x":74,"y":145,"w":69,"h":59},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":2,"y":8,"w":69,"h":59},
+	"sourceSize": {"w":72,"h":72}
+},
+"hay":
+{
+	"frame": {"x":278,"y":1,"w":66,"h":60},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":3,"y":9,"w":66,"h":60},
+	"sourceSize": {"w":72,"h":72}
+},
+"lettuce":
+{
+	"frame": {"x":1,"y":73,"w":67,"h":72},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":5,"y":0,"w":67,"h":72},
+	"sourceSize": {"w":72,"h":72}
+},
+"onion":
+{
+	"frame": {"x":263,"y":68,"w":55,"h":71},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":10,"y":0,"w":55,"h":71},
+	"sourceSize": {"w":72,"h":72}
+},
+"pear":
+{
+	"frame": {"x":207,"y":73,"w":54,"h":68},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":8,"y":0,"w":54,"h":68},
+	"sourceSize": {"w":72,"h":72}
+},
+"peas":
+{
+	"frame": {"x":145,"y":143,"w":61,"h":68},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":9,"y":2,"w":61,"h":68},
+	"sourceSize": {"w":72,"h":72}
+},
+"potato":
+{
+	"frame": {"x":73,"y":1,"w":67,"h":70},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":4,"y":1,"w":67,"h":70},
+	"sourceSize": {"w":72,"h":72}
+},
+"strawberry":
+{
+	"frame": {"x":320,"y":63,"w":51,"h":68},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":9,"y":2,"w":51,"h":68},
+	"sourceSize": {"w":72,"h":72}
+},
+"sugar-beet":
+{
+	"frame": {"x":142,"y":1,"w":66,"h":70},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":3,"y":1,"w":66,"h":70},
+	"sourceSize": {"w":72,"h":72}
+},
+"wheat":
+{
+	"frame": {"x":70,"y":73,"w":67,"h":70},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":2,"w":67,"h":70},
+	"sourceSize": {"w":72,"h":72}
+}},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.1",
+	"image": "crop-icons.png",
+	"format": "RGBA8888",
+	"size": {"w":372,"h":205},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:7516ac31d0fc03429488f9d23d70f57a:de585e50cc808488aada7467925987b7:109663e51bd734ea40a39190b8ddb285$"
+}
+}
